@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* 全体の基本指定 */
+*{
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    color: #F5EFE7;
+    background-color: #05032B;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* 使い回しの指定 */
+/* 幅の制御 */
+.inner {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+}
+/* 横並び */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+/* 背景の塗り分け */
+.bg {
+    background-color: #05032B;
+}
+
+
+h2 {
+    text-align: center;
+}
+a {
+    color: #F5EFE7;
+}
+
+/* ヘッダー */
+.header_logo {
+    padding-top: 20px;
+    padding-right: 4vw;
+}
+.header_logo img {
+    width: 137px;
+    height: 169px;
+}
+.header {
+    justify-content: center;
+    position: fixed;
+}
+.header nav ul {
+    padding-top: 64px;
+}
+.header nav ul li{
+    padding-left: 2em;
+}
+.header nav ul li a {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+/* フッター */
+.footer {
+    background: url("../images/footer_bg.png");
+    width: 1440px;
+    height: 762px;
+    bottom: 0;
+    text-align: center;
+}
+.footer .flex {
+    justify-content: center;
+}
+.footer_logo {
+    padding-top: 310px;
+    text-align: center;
+}
+.footer_text ul {
+    padding-top: 30px;
+}
+.footer_text ul li {
+    padding-left: 2em;
+}
+.footer_text ul li:last-child{
+    padding-right: 2em;
+}
+.footer_text ul li a,.footer_text p small {
+    color: #05032B;
+}
+.footer_nav {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+.sns :nth-of-type(2) img{
+    padding-top: 5px;
+}
+.footer_list{
+    padding-left: 2.5vw;
+}
+.footer-list li a{
+    font-size: 14px;
+}
+.footer_list li:last-child::before{
+    content: "|";
+    padding-right: 2em;
+    color: #05032B;
+}
+.copy{
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+.top_btn {
+    position: fixed;
+}
