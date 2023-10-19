@@ -15,76 +15,87 @@
 </head>
 <body>
   <header>
-    <div class="inner">
-      <div class="flex header">
-        <p class="header_logo"><img src="assets/images/logo.png" alt="logo"></p>
-        <nav>
-          <ul class="flex">
-            <li><a href="about/index.html">海藻水族館の魅力</a></li>
-            <li><a href="guide/index.html">館内のご案内</a></li>
-            <li><a href="news/index.html">イベント情報</a></li>
-            <li><a href="ticket/index.html">料金・チケット</a></li>
-            <li><a href="accsess/index.html">アクセス</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="inner main_visual">
+        <div class="header flex">
+          <p class="header_logo"><img src="assets/images/logo.png" alt="logo"></p>
+          <nav>
+            <ul class="flex">
+              <li><a href="about/index.html">海藻水族館の魅力</a></li>
+              <li><a href="guide/index.html">館内のご案内</a></li>
+              <li><a href="news/index.html">イベント情報</a></li>
+              <li><a href="ticket/index.html">料金・チケット</a></li>
+              <li><a href="accsess/index.html">アクセス</a></li>
+            </ul>
+          </nav>
+        </div>
+        <p class="top_img"><img src="assets/images/top_bg.png" alt="サメ"></p>
       <div class="flex mv">
-        <video src=""></video>
-        <div>
-          <p>ガラス越し、静かな海への片思い</p>
-          <p>Seaweed Aquarium</p>
+        <video class="mv_img" src=""></video>
+        <div class="mv_text">
+          <p class="sub_title">豊洲駅から徒歩10分、海の世界の扉へ</p>
+          <p class="en_seaweed">Seaweed Aquarium</p>
           <h1>海藻水族館</h1>
         </div>
       </div>
-      <div class="flex">
-        <div>
-          <p>今日の天気</p>
+      <div class="flex mv_box">
+        <div class="box">
+          <p class="mv_ttl">今日の天気</p>
           <p><img src="" alt=""></p>
         </div>
-        <div>
-          <p>営業時間</p>
-          <p>9:00 ~ 18:00</p>
+        <div class="box">
+          <p class="mv_ttl">営業時間</p>
+          <p class="text_box">9:00 ~ 18:00</p>
         </div>
-        <div class="flex">
+        <div class="flex box">
           <a><img src="assets/images/calendar_icon.png" alt="calendar_icon"></a>
-          <p>今日の<br>プログラム</p>
+          <p class="text_box2">今日の<br>プログラム</p>
         </div>
       </div>
     </div>
   </header>
   <main>
-    <section>
+    <section class="greeting inner">
+      <h3>ようこそ、海藻水族館へ</h3>
+      <p>
+        ここは都心の喧騒から一歩離れ、深海の神秘的な世界が広がる場所です。<br>
+        私達の水族館は深海魚たちの美しさと不思議な生態を探求し、<br>
+        あなたに驚きと感動をお届けします。
+      </p>
+    </section>
+    <section class="inner">
       <h2><img src="assets/images/news_head.png" alt="お知らせ"></h2>
-      <div class="flex">
+      <div class="news">
         <div class="flex">
-          <p><img src="assets/images/news1.png" alt="ケープペンギンの赤ちゃん"></p>
-          <p>2023.09.08<br><span>ケープペンギンの喜ばしい誕生！</span></p>
+          <div class="flex news1 news_box">
+            <p><img src="assets/images/news1.png" alt="ケープペンギンの赤ちゃん"></p>
+            <p class="news_text">2023.09.08<br><span>ケープペンギンの喜ばしい誕生！</span></p>
+          </div>
+          <div class="flex news2 news_box">
+            <p><img src="assets/images/news2.png" alt="イルカウォーキング"></p>
+          <p class="news_text">2023.07.15<br><span>イルカとの至近距離？！</span></p>
+          </div>
         </div>
         <div class="flex">
-          <p><img src="assets/images/news2.png" alt="イルカウォーキング"></p>
-          <p>2023.07.15<br><span>イルカとの至近距離</span></p>
+          <div class="flex news3 news_box">
+            <p><img src="assets/images/news3.png" alt="黄金メダカ"></p>
+            <p class="news_text">2023.03.27<br><span>黄金のメダカがやってきた！</span></p>
+          </div>
+          <div class="flex news4 news_box">
+            <p><img src="assets/images/news4.png" alt="謹賀新年"></p>
+            <p class="news_text">2022.12.08<br><span>新年をお楽しみに</span></p>
+          </div>
         </div>
       </div>
-      <div class="flex">
-        <div class="flex">
-          <p><img src="assets/images/news3.png" alt="黄金メダカ"></p>
-          <p>2023.03.27<br><span>黄金のメダカがやってきた！</span></p>
-        </div>
-        <div class="flex">
-          <p><img src="assets/images/news4.png" alt="謹賀新年"></p>
-          <p>2022.12.08<br><span>新年をお楽しみに</span></p>
-        </div>
-      </div>
-      <a><p class="read_btn">もっと見る</p></a>
+      <p class="read_btn"><a>もっと見る</a></p>
     </section>
-    <section>
+    <section class="information">
       <h2><img src="assets/images/information_head.png" alt="館内のご案内"></h2>
-      <img src="assets/images/infor_img1.png" alt="深海エリア">
-      <h3>深海エリア</h3>
-      <p>宇宙よりたどり着くのが難しいといわれている深海に住んでいる魚たちを展示しています</p>
-      <a><p class="read_btn">もっと見る</p></a>
+      <img src="assets/images/infor_img1.png" alt="深海エリア" class="infor_img">
+      <h4>深海エリア</h4>
+      <p class="infor_text">宇宙よりたどり着くのが難しいといわれている深海に住んでいる魚たちを展示しています</p>
+      <p class="read_btn"><a>もっと見る</a></p>
     </section>
-    <section>
+    <section class="instagram">
       <div class="flex">
         <a href="https://www.instagram.com"><img src="assets/images/instagram.png" alt="instagram"></a>
         <a href="https://www.instagram.com"><img src="assets/images/insta1.png" alt="イルカ"></a>
@@ -95,7 +106,7 @@
         <a href="https://www.instagram.com"><img src="assets/images/insta4.png" alt="クラゲ"></a>
         <a href="https://www.instagram.com"><img src="assets/images/insta5.png" alt="魚"></a>
       </div>
-      <a><p class="read_btn">もっと見る</p></a>
+      <p class="read_btn"><a>もっと見る</a></p>
     </section>
   </main>
   <footer class="footer">
