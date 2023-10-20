@@ -25,13 +25,14 @@ body {
     display: flex;
     justify-content: space-between;
 }
-/* 背景の塗り分け */
-.bg {
-    background-color: #05032B;
-}
-
 
 h2 {
+    text-align: center;
+}
+h3 {
+    font-size: 44px;
+    padding: 170px 0 140px;
+    letter-spacing: 3px;
     text-align: center;
 }
 a {

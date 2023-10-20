@@ -11,13 +11,8 @@
     margin: 0 auto;
 }
 .about_text {
-    padding: 170px 0 200px;
+    padding-bottom: 200px;
     text-align: center;
-}
-.about_text h3 {
-    font-size: 44px;
-    padding-bottom: 140px;
-    letter-spacing: 3px;
 }
 .about_text h4 {
     font-size: 30px;
@@ -45,7 +40,7 @@
     left: -160px;
 }
 .enjoy2_img {
-    /* position: relative; */
+    position: relative;
     right: -130px;
 }
 .enjoy1 .enjoy_text h5, .enjoy3 .enjoy_text h5  {
