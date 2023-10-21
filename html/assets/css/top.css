@@ -15,12 +15,12 @@ body{
 /* メインビジュアル */
 .mv {
     padding-top: 60px;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .mv_img {
-    width: 670px;
-    height: 670px;
-    padding-right: 90px;
+    width: 690px;
+    height: 690px;
+    padding-right: 50px;
 }
 .mv_text {
     padding-top: 250px;

@@ -46,7 +46,7 @@ a {
 /* ヘッダー */
 .header_logo {
     padding-top: 20px;
-    padding-right: 4vw;
+    padding-right: 2vw;
 }
 .header_logo img {
     width: 137px;
@@ -60,13 +60,140 @@ a {
 .header nav ul {
     padding-top: 64px;
 }
-.header nav ul li{
-    padding-left: 2em;
+.nav_ul li{
+    margin: 0 8px;
+    position: relative;
+    padding: 20px 25px;
 }
 .header nav ul li a {
     font-weight: 700;
     letter-spacing: 2px;
     font-size: 20px;
+    display: block;
+    padding: 20px 25px;
+    margin: -20px -25px;
+}
+/*線の基点位置*/
+.nav_ul li::before,
+.nav_ul li::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 0;
+    height:2px;
+    background:#F5EFE7;
+/*アニメーションの指定*/
+    transition: all 0.2s linear;
+    transition-delay: 0.2s;
+}
+.nav_ul li::before{
+    right: 0;
+    top: 0;
+}
+.nav_ul li::after{
+    left: 0;
+    bottom: 0;
+}
+/*線の基点位置2 spanタグ*/
+.nav_ul li span{
+    display: block;
+}
+.nav_ul li span::before,
+.nav_ul li span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #F5EFE7;
+/*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+.nav_ul li span::before{
+    left: 0;
+    top: 0;
+}
+.nav_ul li span::after{
+    right: 0;
+    bottom: 0;
+}
+
+/*現在地とhoverした際の線の変化*/
+.nav_ul li:hover::before,
+.nav_ul li:hover::after{
+    width: 100%;/*横幅を100%に*/
+}
+.nav_ul li:hover span::before,
+.nav_ul li:hover span::after{
+    height: 100%;/*縦幅を100%に*/
+}
+
+/* 表 */
+.table {
+    padding: 50px 0 30px ;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    border-spacing: 0;
+}
+.table tr:first-of-type {
+    background-color: #F5EFE7;
+    color: #05032B;
+}
+.table tr th {
+    border-left: 2px solid #05032B;
+    padding: 15px 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.table tr th:first-of-type {
+    border: none;
+}
+.table tr td {
+    border-left: 2px solid #F5EFE7;
+    border-bottom: 2px solid #F5EFE7;
+    padding: 30px;
+    font-size: 26px;
+}
+.table tr td span {
+    font-size: 20px;
+}
+.table tr td:last-of-type {
+    border: 2px solid #F5EFE7;
+}
+
+/* タブボタン */
+.tab_control {
+    justify-content: space-evenly;
+}
+.tab {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+.layout {
+    border: 4px solid #F5EFE7;
+    align-items: center;
+    font-size: 27px;
+    padding: 20px 40px;
+}
+.layout p {
+    letter-spacing: 3px;
+}
+.layout p::after {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    content: "";
+    border-top: 4px solid #F5EFE7;
+    border-right: 4px solid #F5EFE7;
+    transform: rotate(135deg);
+    border-radius: 2px;
+    padding: 5px;
+    margin: 0 0 5px 30px;
 }
 
 /* フッター */
@@ -85,28 +212,25 @@ a {
     padding-top: 310px;
     text-align: center;
 }
-.footer_text ul {
+.nav_ul, .sns, .footer_list {
     padding-top: 30px;
 }
-.footer_text ul li {
-    padding-left: 2em;
+.nav_ul li,
+.sns li {
+    margin: 0 1em;
 }
-.footer_text ul li:last-child{
-    padding-right: 2em;
-}
-.footer_text ul li a,.footer_text p small {
+.footer .nav_ul li a,
+.footer_list li a,
+.copy small {
     color: #05032B;
 }
-.footer_nav {
+.footer .nav_ul {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.6px;
 }
 .sns :nth-of-type(2) img{
     padding-top: 5px;
-}
-.footer_list{
-    padding-left: 2.5vw;
 }
 .footer-list li a{
     font-size: 14px;
@@ -115,10 +239,17 @@ a {
     content: "|";
     padding-right: 2em;
     color: #05032B;
+    margin-left: 2em;
 }
 .copy{
     padding-top: 20px;
     font-size: 12px;
+}
+.footer .nav_ul li::before,
+.footer .nav_ul li::after,
+.footer .nav_ul li span::before,
+.footer .nav_ul li span::after {
+    background: #05032B;
 }
 
 /* トップへ戻るボタン */
@@ -139,4 +270,16 @@ a {
     cursor: pointer;
     margin: 0 auto;
     font-size: 20px;
+}
+
+/* カレント */
+.nav_ul .current::before,
+.nav_ul .current::after {
+    content: none;
+}
+.header .current {
+    border: #F5EFE7 solid 2px;
+}
+.footer .current {
+    border: #05032B solid 2px;
 }

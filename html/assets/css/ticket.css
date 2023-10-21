@@ -1,71 +1,11 @@
 @charset "utf-8";
 
-.tab_control {
-    justify-content: space-evenly;
-}
-.tab {
-    display: inline-block;
-    cursor: pointer;
-    margin-bottom: 60px;
-}
-.layout {
-    border: 4px solid #F5EFE7;
-    align-items: center;
-    font-size: 27px;
-    padding: 20px 40px;
-}
+/* タブボタン */
 .layout img {
     padding-right: 20px;
 }
 #tab1 .layout {
     padding: 20px 62px;
-}
-.layout p {
-    letter-spacing: 3px;
-}
-.layout p::after {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    content: "";
-    border-top: 4px solid #F5EFE7;
-    border-right: 4px solid #F5EFE7;
-    transform: rotate(135deg);
-    border-radius: 2px;
-    padding: 5px;
-    margin: 0 0 5px 30px;
-}
-.charge_table {
-    padding: 50px 0 30px ;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    border-spacing: 0;
-}
-.charge_table tr:first-of-type {
-    background-color: #F5EFE7;
-    color: #05032B;
-}
-.charge_table tr th {
-    border-left: 2px solid #05032B;
-    padding: 15px 30px;
-    font-size: 20px;
-    letter-spacing: 2px;
-}
-.charge_table tr th:first-of-type {
-    border: none;
-}
-.charge_table tr td {
-    border-left: 2px solid #F5EFE7;
-    border-bottom: 2px solid #F5EFE7;
-    padding: 30px;
-    font-size: 26px;
-}
-.charge_table tr td span {
-    font-size: 20px;
-}
-.charge_table tr td:last-of-type {
-    border: 2px solid #F5EFE7;
 }
 .charge_text {
     padding-left: 200px;

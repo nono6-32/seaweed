@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+.layout p {
+    margin-left: 100px;
+}
+.layout p::after {
+    margin-left: 100px;
+}
+.map {
+    text-align: center;
+    
+}
+
 .area {
     text-align: center;
 }
