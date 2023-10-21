@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+body{
+    background: conic-gradient(from 180deg at 50% 50%, #050332 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);
+}
 /* ヘッダー */
 .top_img {
     top: 0;
@@ -11,16 +14,16 @@
 }
 /* メインビジュアル */
 .mv {
-    padding-top: 120px;
-    justify-content: center;
+    padding-top: 60px;
+    justify-content: space-evenly;
 }
 .mv_img {
-    width: 500px;
-    height: 500px;
-    padding-right: 120px;
+    width: 670px;
+    height: 670px;
+    padding-right: 90px;
 }
 .mv_text {
-    padding-top: 163px;
+    padding-top: 250px;
     text-align: center;
 }
 .sub_title {
