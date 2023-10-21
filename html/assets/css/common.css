@@ -261,15 +261,89 @@ a {
 
 /* もっと見るボタン */
 .read_btn {
-    border: 2px solid #F5EFE7;
-    background: #05032B;
-    padding: 20px 55px 19px;
+    background: #f5efe72d;
     width: 214px;
-    height: 68px;
+    height: 64px;
     display: block;
-    cursor: pointer;
     margin: 0 auto;
     font-size: 20px;
+    position: relative;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .6s;/*0.7秒遅れてアニメーション*/
+}
+.read_btn span {
+    padding: 20px 55px;
+    display: block;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .6s;/*0.7秒遅れてアニメーション*/    
+}
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.read_btn:hover{
+    background:#F5EFE7;
+}
+.read_btn:hover span{
+    color: #05032B;
+    
+}
+/*横線の設定*/
+.read_btn::before,
+.read_btn::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #F5EFE7;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+/*縦線の設定*/
+.read_btn span::before,
+.read_btn span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #F5EFE7;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.read_btn:hover::before,
+.read_btn:hover::after{
+    width: 100%;
+}
+.read_btn:hover span::before,
+.read_btn:hover span::after{
+    height: 100%;
+}
+
+/*== 左上と右下から枠線が伸びて塗に */
+/*横線が0.2秒送れて出現*/
+.read_btn::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.2s;
+}
+.read_btn::after{
+    left: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+/*縦線が出現*/
+.read_btn span::before{
+    left: 0;
+    top: 0;
+}
+.read_btn span::after{
+    right: 0;
+    bottom: 0;
 }
 
 /* カレント */

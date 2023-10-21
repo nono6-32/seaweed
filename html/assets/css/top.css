@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 body{
-    background: conic-gradient(from 180deg at 50% 50%, #050332 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);
-}
+    background: conic-gradient(from 180deg at 50% 50%, #05032B 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);}
 /* ヘッダー */
 .top_img {
     top: 0;
@@ -107,18 +106,19 @@ body{
 .news2, .news4 {
     margin-top: 140px;
 }
-.news_text {
+.news_text p:first-of-type {
     padding-left: 24px;
     font-size: 21px;
     display: inline-block;
+    position: relative;
 }
-.news_text span {
-    padding-left: 1em;
+.news_text p:last-of-type {
+    padding: 50px 0 0 2em;
     font-size: 22px;
-    line-height: 130px;
+    display: inline-block;
 }
 .news_box {
-    cursor: pointer;
+    position: relative;
 }
 .news_box::after {
     /* background: url("../images/news_btn.png") no-repeat; */
@@ -129,13 +129,60 @@ body{
     border-right: 4px solid #F5EFE7;
     transform: rotate(45deg);
     border-radius: 2px;
-    margin: 70px 0 0 70px;
+    margin: 70px 0 0 -20px;
 }
-.news1::after {
-    margin-left: 27px;
+.news_text {
+    width: 400px;
 }
-.news4::after {
-    margin-left: 130px;
+.news4 .news_text {
+    width: 300px;
+    margin-right: 100px;
+}
+.news_text p:first-of-type::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 5px;
+    left: 140px;
+    /*線の形状*/
+    width: 230px;
+    height: 2px;
+    background:#F5EFE7;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+.news2 .news_text p:first-of-type::after,
+.news4 .news_text p:first-of-type::after {
+    width: 200px;
+}
+/*現在地とhoverの設定*/
+.news_box:hover .news_text p:first-of-type::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+.news_text::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 180px;
+    /*線の形状*/
+    width: 340px;
+    height: 2px;
+    background:#F5EFE7;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+.news2 .news_text::after,
+.news4 .news_text::after {
+    width: 320px;
+}
+/*現在地とhoverの設定*/
+.news_box:hover .news_text::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
 /* 館内のご案内 */
@@ -153,7 +200,6 @@ body{
     font-size: 19px;
     padding: 40px 0 75px;
 }
-
 /* instagram */
 .instagram .flex {
     justify-content: center;
@@ -163,4 +209,14 @@ body{
 }
 .instagram .read_btn {
     margin-top: 60px;
+}
+.instagram img {
+    opacity: .7;
+    transition: all .3s;
+}
+.instagram a .instagram_img {
+    opacity: 1;
+}
+.instagram img:hover {
+    opacity: 1;
 }

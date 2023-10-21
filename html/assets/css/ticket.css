@@ -34,6 +34,7 @@
     margin-bottom: 42px;
     display: block;
     cursor: pointer;
+    transition: all .6s;
 }
 .passport_btn p {
     font-size: 28px;
@@ -72,6 +73,16 @@
     position: absolute;
     right: 10vw;
     top: 916px;
+}
+.passport_btn:hover {
+    background-color: #F5EFE7;
+}
+.passport_btn:hover p a {
+    color: #05032B;
+}
+.passport_btn:hover p::after {
+    border-top: 4px solid #05032B;
+    border-right: 4px solid #05032B;
 }
 
 /* 障害をお持ちの方 */
@@ -217,7 +228,6 @@
 }
 .apply_btn_content {
     align-items: center;
-
     cursor: pointer;
 }
 .apply_btn {
