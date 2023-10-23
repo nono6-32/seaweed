@@ -2,17 +2,33 @@
 
 @media screen  and (max-width: 768px) {
     /* common */
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+    min-height: 100vh;
+    max-width: 768px;
+    margin: 0 auto;
+    }
+    .inner {
+        max-width: 768px;
+    }
     .main_visual .flex {
         justify-content: space-between;
-        width: 620px;
+    }
+    .top_img {
+        z-index: -1;
     }
     .header .nav_ul {
         display: none;
     }
     .hamburger {
         display: block;
-        top: 50px;
-        right: 30px;
+        position: fixed;
+        top: 57px;
+        right: 23px;
     }
     /* top */
     .mv {
