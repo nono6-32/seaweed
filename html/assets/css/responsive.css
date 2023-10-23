@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@media screen  and (max-width: 768px) {
+    /* common */
+    .main_visual .flex {
+        justify-content: space-between;
+        width: 620px;
+    }
+    .header .nav_ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        top: 50px;
+        right: 30px;
+    }
+    /* top */
+    .mv {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .mv_text {
+        width: 620px;
+        padding: 0;
+        align-items: center;
+    }
+}
