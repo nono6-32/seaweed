@@ -1,15 +1,16 @@
 @charset "utf-8";
 
 body{
-    background: conic-gradient(from 180deg at 50% 50%, #05032B 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);}
+    background: conic-gradient(from 180deg at 50% 50%, #05032B 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);
+}
 /* ヘッダー */
 .top_img {
     top: 0;
     right: 0;
-    width: 750px;
-    height: 734px;
+    width: 650px;
+    height: 100%;
     position: absolute;
-    z-index: -1;
+
 }
 /* メインビジュアル */
 .mv {
@@ -24,6 +25,7 @@ body{
 .mv_text {
     padding-top: 250px;
     text-align: center;
+    z-index: 1;
 }
 .sub_title {
     font-size: 26px;
@@ -58,6 +60,22 @@ body{
 }
 .box:last-child {
     padding-right: 0;
+}
+.program a {
+    padding-left: 77px;
+    margin-left: -77px;
+}
+.program::before {
+    background: url("../images/calendar_icon.png")no-repeat;
+    content: "";
+    width: 77px;
+    height: 77px;
+}
+.program:hover a {
+    opacity: 0.7;
+}
+.program:hover::before {
+    opacity: 0.7;
 }
 .mv_ttl {
     text-align: center;
@@ -121,7 +139,6 @@ body{
     position: relative;
 }
 .news_box::after {
-    /* background: url("../images/news_btn.png") no-repeat; */
     width: 23px;
     height: 23px;
     content: "";

@@ -61,17 +61,17 @@ a {
     padding-top: 64px;
 }
 .nav_ul li{
-    margin: 0 8px;
+    margin: 0 5px;
     position: relative;
-    padding: 20px 25px;
+    padding: 20px 22px;
 }
 .header nav ul li a {
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 20px;
     display: block;
-    padding: 20px 25px;
-    margin: -20px -25px;
+    padding: 20px 22px;
+    margin: -20px -22px;
 }
 /*線の基点位置*/
 .nav_ul li::before,

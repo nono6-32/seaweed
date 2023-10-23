@@ -62,7 +62,7 @@
     content: "";
     padding: 169px 20px;
     position: absolute;
-    left: 10vw;
+    left: 100px;
 }
 .passport::after {
     background: url("../images/passport_right.png") no-repeat;
@@ -71,7 +71,7 @@
     content: "";
     padding: 169px 20px;
     position: absolute;
-    right: 10vw;
+    right: 70px;
     top: 916px;
 }
 .passport_btn:hover {
