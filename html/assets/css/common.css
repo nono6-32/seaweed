@@ -11,6 +11,7 @@ body {
     color: #F5EFE7;
     background-color: #05032B;
     font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
 }
 
 /* 使い回しの指定 */
@@ -409,7 +410,7 @@ a {
         max-width: 768px;
         width: 100%;
         margin: 0 auto;
-        
+        overflow-x: hidden;
     }
     .inner {
         max-width: 768px;
@@ -453,8 +454,9 @@ a {
     }
     .m_nav {
         position: fixed;
-        top: 57px;
+        top: 65px;
         right: 23px;
+        z-index: 999;
     }
     .hamburger {
         display: block;        
@@ -493,6 +495,6 @@ a {
         height: auto;
     }
     .top_btn {
-        right: 20px;
+        right: 10px;
     }
 }

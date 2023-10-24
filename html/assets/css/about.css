@@ -34,31 +34,40 @@
 }
 .enjoy_box {
     padding: 90px 0;
+    max-width: 1440px;
 }
 .relative_img {
     position: relative;
     width: 100%;
     height: 100%;
 }
-.relative_img .enjoy2_img {
-    overflow: hidden;
+.enjoy2_img img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .enjoy1 .relative_img, .enjoy3 .relative_img {
     left: -160px;
 }
+.enjoy2 .relative_img {
+    right: -160px;
+}
+
 .enjoy1 .enjoy_text h5, .enjoy3 .enjoy_text h5  {
     left: -2em;
     position: relative;
 }
-.enjoy1 .enjoy_text, .enjoy3 .enjoy_text {
+.enjoy1 .enjoy_text {
     width: 1000px;
-    padding-right: 20px;
+    margin-right: 50px;
 }
 .enjoy2 .enjoy_text {
-    padding: 40px 0 0 100px;
+    padding: 60px 0 0 180px;
     width: 800px;
 }
 .enjoy3 .enjoy_text {
+    width: 1000px;
+    padding-right: 20px;
     padding-top: 40px;
 }
 .enjoy_text h5 {
@@ -67,7 +76,7 @@
 }
 .enjoy_text p {
     font-size: 18px;
-    line-height: 2em;
+    line-height: 2.5em;
 }
 
 /* 生き物紹介 */
@@ -121,6 +130,14 @@
         padding-top: 0;
     }
     /* 楽しみ方 */
+    .enjoy1, .enjoy3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .enjoy2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .enjoy {
         width: 100%;
         padding: 790px 0 0 0;
@@ -128,13 +145,11 @@
     }
     .enjoy_box {
         padding: 70px 0;
+        width: 100%;
     }
     .relative_img, .enjoy2_img {
         position: absolute;
         z-index: -1;
-    }
-    .enjoy2_img {
-        top: -460px;
     }
     .enjoy3 .relative_img {
         margin-top: 30px;
@@ -142,10 +157,14 @@
     .relative_img img, .enjoy2_img img {
         width: 480px;
         height: auto;
-        overflow: hidden;
     }
     .enjoy1 .relative_img, .enjoy3 .relative_img {
         right: 5%;
+    }
+    .enjoy2 .relative_img {
+        overflow: hidden;
+        padding-top: 200px;
+        right: 0;
     }
     .enjoy1 .enjoy_text, .enjoy3 .enjoy_text {
         width: 100%;
@@ -246,7 +265,6 @@
         text-align: right;
     }
     .zoo_box #click {
-        
         display: block;
         opacity: 1;
     }
