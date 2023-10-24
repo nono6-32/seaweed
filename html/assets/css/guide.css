@@ -45,3 +45,7 @@
 .area_bg .read_btn {
     margin-top: 20px;
 }
+/* レシポンシブ */
+@media screen and (max-width: 767px) {
+
+}

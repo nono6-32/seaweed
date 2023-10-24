@@ -83,10 +83,10 @@ body{
 }
 .text_box {
     font-size: 30px;
-}.text_box2 {
+}
+.text_box2 {
     font-size: 20px;
     line-height: normal;
-    
 }
 .main_visual {
     margin-bottom: 50px;
@@ -236,4 +236,193 @@ body{
 }
 .instagram img:hover {
     opacity: 1;
+}
+
+/* レシポンシブ */
+@media screen and (max-width: 767px) {
+    /* メインビジュアル */
+    .top_img {
+        z-index: -1;
+        display: none;
+    }
+    .mv {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .mv_img {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: -20px;
+        padding-right: 0;
+    }
+    .mv_text {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        text-align: center;
+        margin-top: -90px;
+    }
+    .sub_title {
+        font-size: 18px;
+    }
+    .en_seaweed {
+        font-size: 19px;
+        letter-spacing: 2.09px;
+    }
+    .en_seaweed:before, .en_seaweed::after {
+        width: 5vw;
+        padding: 0 5vw;
+    }
+    .mv_text h1 {
+        font-size: 55px;
+        letter-spacing: 13px;
+    }
+    .mv_box {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 58px 0 0;
+    }
+    .box {
+        padding-right: 0;
+    }
+    .mv_ttl {
+        font-size: 15px;
+    }
+    .text_box {
+        font-size: 20px;
+    }
+    .mv_box .box:nth-of-type(2) {
+        padding: 0 25px;
+    }
+    .program {
+        display: flex;
+    }
+    .program::before {
+        background: url("../images/calendar_icon_m.png")no-repeat;
+        margin-right: -37px;
+        margin-top: 5px;
+    }
+    .program a {
+        padding: 0;
+        margin: 0;
+    }
+    .text_box2{
+        font-size: 15px;
+    }
+    /* 挨拶  */
+    .greeting {
+        background: url("../images/top_bg_m.png") no-repeat;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .greeting h3 {
+        font-size: 27px;
+    }
+    .greeting p {
+        font-size: 17px;
+        letter-spacing: 0.24px;
+        line-height: 50px;
+    }
+    /* お知らせ */
+    .news .flex .flex {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .news_box p img {
+        width: 95px;
+        height: 95px;
+    }
+    .news1 ,.news3 {
+        margin: 0;
+    }
+    .news2, .news4 {
+        margin: 0;
+    }
+    .news4 .news_text {
+        width: 100%;
+        margin-right: 0;
+    }
+    .news_text {
+        width: 100%;
+    }
+    .news_text p:first-of-type {
+        font-size: 17px;
+        padding-left: 8px;
+        width: 100%;
+    }
+    .news_text p:last-of-type {
+        padding: 23px 0 31px 13px;
+        font-size: 15.5px;
+        letter-spacing: 0;
+    }
+    .news_text p:first-of-type::after {
+        transform: scale(1, 1);
+        transition: none;
+        left: 85px;
+        width: 67%;
+        bottom: 9px;
+    }
+    .news2 .news_text p:first-of-type::after,
+    .news4 .news_text p:first-of-type::after {
+        width: 67%;
+    }
+    .news2 .news_text::after,
+    .news4 .news_text::after {
+        width: 59%;
+    }
+    .news_box::after {
+        width: 14px;
+        height: 10px;
+        margin: 42px 13% 0 0;
+    }
+    .news_text::after {
+        transform: scale(1, 1);
+        transition: none;
+        left: 105px;
+        width: 59%;
+    }
+    .news_box {
+        margin: 20px 10px;
+        width: 100%;
+    }
+
+    /* 館内のご案内 */
+    .information {
+        padding: 90px 0 70px;
+    }
+    .infor_img {
+        width: 271px;
+        height: auto;
+    }
+    .information h4 {
+        font-size: 28px;
+    }
+    .infor_text {
+        font-size: 16px;
+        padding: 16px 0 43px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
+    /* instagram */
+    .instagram {
+        width: 100%;
+    }
+    .instagram .flex {
+        display: flex;
+        justify-content: center;
+    }
+    .instagram .flex a {
+        padding: 2vw;
+    }
+    .instagram img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+    }
+
 }

@@ -2,13 +2,15 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/_variables.scss">
   <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +20,9 @@
 </head>
 <body>
   <header>
-    <div class="inner main_visual">
+    <div class="inner main_visual content">
         <div class="header flex">
-          <p class="header_logo"><img src="assets/images/logo.png" alt="logo"></p>
+          <p class="header_logo"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></p>
           <nav>
             <ul class="flex nav_ul">
               <li><a href="about/index.html"><span>海藻水族館の魅力</span></a></li>
@@ -31,13 +33,15 @@
             </ul>
           </nav>
           <!-- 768px以下でハンバーガーメニューに -->
-          <div class="hamburger"><span></span><span></span><span></span></div>
+          <div class="m_nav">
+            <div class="hamburger"><span></span><span></span><span></span></div>
+          </div>        
         </div>
         <div class="top_img">
-          <p><img src="assets/images/top_bg.png" alt="サメ"></p>
+          <p><img src="assets/images/top_bg.png" alt="サメ" class="img-fluid"></p>
         </div>
       <div class="flex mv">
-        <video class="mv_img" src="assets/images/top_mv.MOV" autoplay muted playsinline loop></video>
+        <video class="mv_img" src="assets/images/top_mv.MOV" autoplay muted playsinline loop class="img-fluid"></video>
         <div class="mv_text">
           <p class="sub_title">豊洲駅から徒歩10分、海の世界の扉へ</p>
           <p class="en_seaweed">Seaweed Aquarium</p>
@@ -60,11 +64,11 @@
     </div>
   </header>
   <main>
-    <section class="greeting inner">
+    <section class="greeting inner container">
       <h3>ようこそ、海藻水族館へ</h3>
       <p>
-        ここは都心の喧騒から一歩離れ、深海の神秘的な世界が広がる場所です。<br>
-        私達の水族館は深海魚たちの美しさと不思議な生態を探求し、<br>
+        ここは都心の喧騒から一歩離れ、<br class="br_sp">深海の神秘的な世界が広がる場所です。<br>
+        私達の水族館は深海魚たちの美しさと<br class="br_sp">  不思議な生態を探求し、<br>
         あなたに驚きと感動をお届けします。
       </p>
     </section>
@@ -75,14 +79,14 @@
           <div class="flex news1 news_box">
             <p><img src="assets/images/news1.png" alt="ケープペンギンの赤ちゃん"></p>
             <a class="news_text" href="news/index.html#news">
-              <p>2023.09.08</p>
+              <p>2023.09.08</p><br class="br_sp">
               <p>ケープペンギンの喜ばしい誕生！</p>
             </a>
           </div>
           <div class="flex news2 news_box">
             <p><img src="assets/images/news2.png" alt="イルカウォーキング"></p>
             <a class="news_text" href="news/index.html#news">
-              <p>2023.07.15</p>
+              <p>2023.07.15</p><br class="br_sp">
               <p>イルカとの至近距離？！</p>
             </a>
           </div>
@@ -91,14 +95,14 @@
           <div class="flex news3 news_box">
             <p><img src="assets/images/news3.png" alt="黄金メダカ"></p>
             <a class="news_text" href="news/index.html#news">
-              <p>2023.03.27</p>
+              <p>2023.03.27</p><br class="br_sp">
               <p>黄金のメダカがやってきた！</p>
             </a>
           </div>
           <div class="flex news4 news_box">
             <p><img src="assets/images/news4.png" alt="謹賀新年"></p>
             <a class="news_text" href="news/index.html#news">
-              <p>2022.12.08</p>
+              <p>2022.12.08</p><br class="br_sp">
               <p>新年をお楽しみに</p>
             </a>
           </div>
@@ -110,7 +114,7 @@
       <h2><img src="assets/images/information_head.png" alt="館内のご案内"></h2>
       <img src="assets/images/infor_img1.png" alt="深海エリア" class="infor_img">
       <h4>深海エリア</h4>
-      <p class="infor_text">宇宙よりたどり着くのが難しいといわれている深海に住んでいる魚たちを展示しています</p>
+      <p class="infor_text">宇宙よりたどり着くのが難しいといわれている<br class="br_sp">深海に住んでいる魚たちを展示しています</p>
       <a href="guide/index.html" class="read_btn"><span>もっと見る</span></a>
     </section>
     <section class="instagram">

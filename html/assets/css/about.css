@@ -102,3 +102,8 @@
     line-height: 50px;
     letter-spacing: 0.7px;
 }
+
+/* レシポンシブ */
+@media screen and (max-width: 767px) {
+
+}
