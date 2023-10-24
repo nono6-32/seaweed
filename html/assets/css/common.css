@@ -409,6 +409,7 @@ a {
         max-width: 768px;
         width: 100%;
         margin: 0 auto;
+        
     }
     .inner {
         max-width: 768px;
@@ -428,8 +429,24 @@ a {
         height: auto;
         padding: 27px 0 0 8px;
     }
-    h2 img{
-        height: 45px;
+    h2 {
+        text-align: center;
+        margin: 0 6px;
+        width: 100%;
+    }
+    h2 img {
+        max-height: 35px;
+        width: auto;
+        height: 100%;
+    }
+    h3 {
+        font-size: 32px;
+        padding: 167px 0 0 0;
+        letter-spacing: 1px;
+    }
+    h4 {
+        font-size: 19px;
+        letter-spacing: 0.76px;
     }
     .header .nav_ul {
         display: none;

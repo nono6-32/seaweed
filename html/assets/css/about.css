@@ -80,24 +80,24 @@
 .zoo .flex {
     justify-content: center;
 }
-.zoo .flex div:nth-of-type(2) {
+.zoo_box:nth-of-type(2) {
     padding: 0 90px;
 }
 .zoo .flex:first-of-type {
     padding-bottom: 128px;
 }
-.zoo .flex div p:first-of-type {
+.zoo_box p:first-of-type {
     font-size: 33px;
     letter-spacing: 3px;
     padding-top: 22px;
     font-weight: 700;
 }
-.zoo .flex div p:nth-of-type(2){
+.zoo_box p:nth-of-type(2){
     font-size: 22px;
     letter-spacing: 1.76px;
     padding: 8px 0 32px;
 }
-.zoo .flex div p:nth-of-type(3){
+.zoo_box p:nth-of-type(3){
     font-size: 17px;
     line-height: 50px;
     letter-spacing: 0.7px;
@@ -105,5 +105,149 @@
 
 /* レシポンシブ */
 @media screen and (max-width: 767px) {
+    /* メインビジュアル */
+    .about_mv {
+        background: url("../images/about_bg_m.png") no-repeat;
+        height: auto;
+    }
+    .about_text h4{
+        font-size: 18px;
+        letter-spacing: 0.76px;
+        padding: 70px 0 40px;
+    }
+    .about_text p {
+        font-size: 15px;
+        line-height: 40px;
+        padding-top: 0;
+    }
+    /* 楽しみ方 */
+    .enjoy {
+        width: 100%;
+        padding: 790px 0 0 0;
+        text-align: center;
+    }
+    .enjoy_box {
+        padding: 70px 0;
+    }
+    .relative_img, .enjoy2_img {
+        position: absolute;
+        z-index: -1;
+    }
+    .enjoy2_img {
+        top: -460px;
+    }
+    .enjoy3 .relative_img {
+        margin-top: 30px;
+    }
+    .relative_img img, .enjoy2_img img {
+        width: 480px;
+        height: auto;
+        overflow: hidden;
+    }
+    .enjoy1 .relative_img, .enjoy3 .relative_img {
+        right: 5%;
+    }
+    .enjoy1 .enjoy_text, .enjoy3 .enjoy_text {
+        width: 100%;
+        padding: 0;
+    }
+    .enjoy1 .enjoy_text {
+        padding: 210px 0 0 0;
+    }
+    .enjoy2 .enjoy_text {
+        padding: 0;
+        width: 100%;
+    }
+    .enjoy3 .enjoy_text {
+        padding: 250px 0 0 0;
+    }
+    .enjoy1 .enjoy_text h5, 
+    .enjoy2 .enjoy_text h5, 
+    .enjoy3 .enjoy_text h5 {
+        font-size: 27px;
+        letter-spacing: 0.81px;
+        text-shadow: 0px 0px 4px #05032B;
+    }
+    .enjoy1 .enjoy_text h5, .enjoy3 .enjoy_text h5 {
+        margin-right: 10px;
+        text-align: right;
+        left: 0;
+    }
+    .enjoy_text p {
+        font-size: 15px;
+        letter-spacing: 0;
+        padding-top: 45px;
+    }
+    .enjoy2 .enjoy_text h5 {
+        text-align: left;
+        margin-left: 10px;
+        padding-top: 280px;
+    }
+    .enjoy3 .enjoy_text h5  {
+        padding-top: 30px;
+    }
 
+    /* 生き物の紹介 */
+    .zoo {
+        width: 100%;
+    }
+    .zoo .flex:first-of-type {
+        padding: 0 10px;
+    }
+    .zoo .flex {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        align-items: center;
+    }
+    .zoo_box {
+        width: 100%;
+    }
+    .zoo_box img {
+        width: 100%;
+    }
+    .zoo h2 {
+        padding: 0;
+    }
+    .zoo .br_sp {
+        padding: 20px 0;
+    }
+    .zoo_box:nth-of-type(2) {
+        padding: 0 10px;
+    }
+    .zoo_box p:first-of-type {
+        font-size: 21px;
+        letter-spacing: 1px;
+        padding-top: 5px;
+        font-weight: 700;
+    }
+    .zoo_box p:nth-of-type(2){
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        padding: 0 0 15px;
+    }
+    .zoo_box p:nth-of-type(3){
+        font-size: 16px;
+        line-height: 50px;
+        letter-spacing: 0.8px;
+        display: none;
+        width: 100%;
+        position: absolute;
+        padding: 5px;
+        line-height: 30px;
+    }
+    .zoo .flex:first-of-type p:nth-of-type(3){
+        text-align: left;
+    }
+    .zoo .flex:nth-of-type(2) p:nth-of-type(3){
+        text-align: center;
+    }
+    .zoo .flex:last-of-type p:nth-of-type(3){
+        text-align: right;
+    }
+    .zoo_box #click {
+        
+        display: block;
+        opacity: 1;
+    }
 }
