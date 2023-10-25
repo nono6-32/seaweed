@@ -8,14 +8,15 @@
 }
 .map {
     text-align: center;
-    
+    width: 94%;
+    height: auto;
 }
 
 .area {
     text-align: center;
 }
 .area h2 {
-    padding-bottom: 120px;
+    padding: 50px 0 120px;
 }
 .area .flex {
     justify-content: center;
@@ -39,8 +40,9 @@
 }
 .area_bg {
     background: url("../images/guide_bg.png") no-repeat;
-    width: 100%;
-    height: 1000px;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding-bottom: 60px;
 }
 .area_bg .read_btn {
     margin-top: 20px;
