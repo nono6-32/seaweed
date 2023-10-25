@@ -3,15 +3,14 @@
 /* メインビジュアル */
 .about_mv {
     background: url("../images/about_bg.png") no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     width: 100%;
-    height: 679px;
     z-index: -1;
     position: absolute;
     margin: 0 auto;
 }
 .about_text {
-    padding-bottom: 200px;
+    padding: 70px 0 200px;
     text-align: center;
 }
 .about_text h4 {

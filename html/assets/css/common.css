@@ -285,7 +285,7 @@ a {
     margin-left: 2em;
 }
 .copy{
-    padding-top: 20px;
+    padding: 20px 0 30px;
     font-size: 12px;
 }
 .footer .nav_ul li::before,
