@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../assets/css/guide.css">
   <link rel="shortcut icon" href="../assets/images/favicon.ico">
   <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon-180x180.png">
+  <script src="../assets/js/jquery-3.7.1.min.js"></script>
+  <script src="../assets/js/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -36,7 +38,7 @@
   </header>
   <main>
     <h3>館内のご案内</h3>
-    <div>
+    <div class="box_tabpages">
       <ul class="flex tab_control" id="tab_control">
         <li id="tab1" class="tab">
           <div class="layout"><p>1階</p></div>
@@ -46,11 +48,11 @@
         </li>
       </ul>
     </div>
-    <div>
-      <div class="tabpage">
+    <div class="tab_body" id="tab_body">
+      <div class="tabpage box_general">
         <div class="map"><img src="../assets/images/floormap_1st_img.png" alt="1階のフロアマップ"></div>
       </div>
-      <div class="tabpage">
+      <div class="tabpage box_group">
         <div class="map"><img src="../assets/images/floormap_2nd_img.png" alt="2階のフロアマップ"></div>
       </div>
     </div>

@@ -43,6 +43,15 @@ h4 {
 a {
     color: #F5EFE7;
 }
+.effect_fade {
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition: all 1.5s ease;
+}
+.effect_fade .effect_scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+}
 
 /* ヘッダー */
 .header_logo {
@@ -291,7 +300,6 @@ a {
 .top_btn {
     position: fixed;
     right: 50px;
-    bottom: 40px;
 }
 
 /* もっと見るボタン */
