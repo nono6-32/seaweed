@@ -299,105 +299,61 @@
     .charge_text {
         padding-left: 15px;
         text-align: left;
-        line-height: 16.9px;
+        line-height: 18px;
         font-size: 15px;
     }
     /* 年間パスポート */
-    .passport {
-        text-align: center;
-        padding: 80px 0;
-    }
     .passport h4 {
-        padding-top: 30px;
+        padding-top: 0;
+        font-size: 24px;
     }
-    .passport_p {
-        padding: 15px 0 50px;
-        letter-spacing: 1px;
-    }
-    .passport .flex {
-        justify-content: space-evenly;
+    .passport_p,
+    .charge2_text {
+        padding: 15px 0 30px;
+        letter-spacing: 0px;
+        font-size: 16px;
+        line-height: 20px;
     }
     .passport_btn {
-        border: 6px solid #F5EFE7;
         border-radius: 57px;
-        margin-bottom: 42px;
-        display: block;
-        cursor: pointer;
-        transition: all .6s;
+        margin-bottom: 39px;
     }
     .passport_btn p {
-        font-size: 28px;
-        padding: 32px 60px;
-    }
-    .passport_btn p::after {
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        content: "";
-        border-top: 4px solid #F5EFE7;
-        border-right: 4px solid #F5EFE7;
-        transform: rotate(45deg);
-        border-radius: 2px;
-        padding: 5px;
-        margin-left: 30px;
+        font-size: 24px;
+        padding: 27px;
     }
     .pass_btn2 p{
-        padding: 32px 70px;
+        padding: 27px;
     }
-    .passport::before {
-        background: url("../images/passport_left.png") no-repeat;
-        width: 39px;
-        height: 338px;
-        content: "";
-        padding: 169px 20px;
-        position: absolute;
-        left: 100px;
-    }
+    .passport::before,
     .passport::after {
-        background: url("../images/passport_right.png") no-repeat;
-        width: 39px;
-        height: 338px;
-        content: "";
-        padding: 169px 20px;
-        position: absolute;
-        right: 70px;
-        top: 916px;
+        display: none;
     }
     .passport_btn:hover {
-        background-color: #F5EFE7;
+        background-color: #05032B;
     }
     .passport_btn:hover p a {
-        color: #05032B;
+        color: #F5EFE7;
     }
     .passport_btn:hover p::after {
-        border-top: 4px solid #05032B;
-        border-right: 4px solid #05032B;
+        border-top: 4px solid #F5EFE7;
+        border-right: 4px solid #F5EFE7;
     }
 
     /* 障害をお持ちの方 */
     .charge2 h4{
-        text-align: center;
-        padding: 34px 0;
-    }
-    .charge2_text {
-        font-size: 22px;
-        letter-spacing: 2.3px;
-        text-align: center;
+        padding: 0;
     }
     .charge2_list {
-        justify-content: space-evenly;
-        font-size: 23px;
-        padding-top: 30px;
+        font-size: 19px;
+        padding: 10px 0 0 20%;
+        text-align: left; /* 文字を左寄せ */
     }
     .charge2_list li::before {
-        background: url("../images/maru_blue.png") no-repeat;
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px; /* アイコンとテキスト間のスペース調整（必要に応じて調整） */
-        width: 24px;
-        height: 24px;
-        padding-top: 5px;
+        background-size: 20px;
+        align-items: center;
+        width: 20px;
+        height: 20px;
     }
     /* 一般のお客さまここまで */
 
