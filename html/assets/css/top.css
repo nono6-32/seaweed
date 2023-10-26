@@ -21,6 +21,7 @@ body{
     width: 690px;
     height: 690px;
     padding-right: 50px;
+    z-index: -2;
 }
 .mv_text {
     padding-top: 250px;
@@ -54,12 +55,23 @@ body{
 }
 .mv_box {
     justify-content: center;
+    align-items: center;
 }
 .box {
-    padding-right: 120px;
+    padding: 0 60px;
 }
 .box:last-child {
     padding-right: 0;
+}
+.weather_box {
+    text-align: center;
+}
+#weather {
+    width: 50px;
+    height: 50px;
+}
+.program {
+    padding-top: 25px;
 }
 .program a {
     padding-left: 77px;

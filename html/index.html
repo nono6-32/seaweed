@@ -7,6 +7,7 @@
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="intersection-observer.js"></script>
   <script src="assets/js/script.js"></script>
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
@@ -48,9 +49,9 @@
         </div>
       </div>
       <div class="flex mv_box">
-        <div class="box">
+        <div class="box weather_box">
           <p class="mv_ttl">今日の天気</p>
-          <p><img src="" alt=""></p>
+          <p><img src="assets/images/weather/sunny.png" alt="" id="weather"></p>
         </div>
         <div class="box">
           <p class="mv_ttl">営業時間</p>
@@ -178,5 +179,6 @@
   <div class="top_btn">
     <a href="#"><img src="assets/images/top_btn.png" alt="トップへ戻る"></a>
   </div>
+  <script src="assets/js/weather.js"></script>
 </body>
 </html>

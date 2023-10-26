@@ -52,6 +52,55 @@ $(function () {
 	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 	});
 
+	jQuery(document).ready(function ($) {
+		var bArray = [];
+		var sArray = [8, 12, 17, 22, 30];
+		var animationInterval;
+		var animationDuration = 20000; // アニメーションの時間（ミリ秒）
+	
+		for (var i = 0; i < $('main').width(); i++) {
+			bArray.push(i);
+		}
+	
+		function randomValue(arr) {
+			return arr[Math.floor(Math.random() * arr.length)];
+		}
+	
+		function startAnimation() {
+			animationInterval = setInterval(function () {
+				var size = randomValue(sArray);
+				$('main').append(
+					'<div class="bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>'
+				);
+	
+				$('.bubble').animate({
+					'bottom': '100%',
+					'opacity': '-=0.7'
+				}, animationDuration, function () {
+					$(this).remove();
+				});
+			}, 350);
+		}
+	
+		startAnimation(); // アニメーションを開始
+	
+		// 一定時間が経過したらアニメーションを停止
+		setTimeout(function () {
+			clearInterval(animationInterval);
+		}, 20000); // 60秒後に停止（例）
+	
+	});
+	
+
+	//水面のアニメーション
+    $(".ripples").ripples({
+        dropRadius: 20,
+        perturbance: 0.01,
+        resolution: 1000,
+        interactive: true,
+        crossOrigin: ""
+    });
+
 	/* 下スクロール・上スクロール切り替え
 	----------------------------------------------- */
 	var startPos = 0;
