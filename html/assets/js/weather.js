@@ -1,34 +1,6 @@
-// 天気アイコンを設定する関数
-function setWeatherIcon(weatherCode) {
-    const weatherImgElement = document.getElementById("weather");
-    let iconPath;
 
-    switch (weatherCode) {
-        case 1:
-            iconPath = "assets/images/weather/sunny.png";
-            break;
-        case 2:
-        case 3:
-            iconPath = "assets/images/weather/cloudy.png";
-            break;
-        case 4:
-            iconPath = "assets/images/weather/rainy.png";
-            break;
-        case 5:
-            iconPath = "assets/images/weather/snowy.png";
-            break;
-        case 9:
-            iconPath = "assets/images/weather/thunder.png";
-            break;
-        default:
-            iconPath = "assets/images/weather/sunny.png";
-            break;
-    }
+const apiUrl = 'https://api.open-meteo.com/v1/forecast?longitude=139.485&latitude=35.396&timezone=Asia%2FTokyo&daily=weathercode';
 
-    weatherImgElement.src = iconPath;
-}
-
-// APIからデータを取得
 fetch(apiUrl)
     .then(response => {
         if (!response.ok) {
@@ -40,8 +12,34 @@ fetch(apiUrl)
         console.log(data);
         console.log(data.daily.weathercode[0]);
         const weatherCode = data.daily.weathercode[0];
-        setWeatherIcon(weatherCode);
+
+        const weatherImgElement = document.getElementById("weather");
+        console.log(weatherImgElement);
+
+        switch (weatherCode) {
+            case 1:
+                weatherImgElement.src = "assets/images/weather/sunny.png";
+                break;
+            case 2:
+                weatherImgElement.src = "assets/images/weather/cloudy.png";
+                break;
+            case 3:
+                weatherImgElement.src = "assets/images/weather/cloudy.png";
+                break;
+            case 4:
+                weatherImgElement.src = "assets/images/weather/rainy.png";
+                break;
+            case 5:
+                weatherImgElement.src = "assets/images/weather/snowy.png";
+                break;
+            case 9:
+                weatherImgElement.src = "assets/images/weather/thunder.png";
+                break;
+            default:
+                weatherImgElement.src = "assets/images/weather/sunny.png";
+                break;
+        }
     })
     .catch(error => {
         console.log('Fetch error:', error);
-    });
+    })

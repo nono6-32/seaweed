@@ -219,19 +219,6 @@ body{
     padding: 60px 0;
     text-align: center;
 }
-.infor_img {
-    padding: 52px 0;
-    width: 30%;
-    height: auto;
-    
-}
-.information h4 {
-    font-size: 31px;
-}
-.infor_text {
-    font-size: 19px;
-    padding: 40px 0 75px;
-}
 .area1 {
     background: url("../images/area1.png") no-repeat;
 }
@@ -269,13 +256,13 @@ body{
 @media screen and (max-width: 767px) {
     /* メインビジュアル */
     .top_img {
-        z-index: -1;
         display: none;
     }
     .mv {
         display: block;
         text-align: center;
         padding: 0;
+        width: 100%;
     }
     .mv_img {
         width: 100%;
@@ -308,12 +295,12 @@ body{
     }
     .mv_box {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         margin: 0;
         padding: 58px 0 0;
     }
     .box {
-        padding-right: 0;
+        padding: 0;
     }
     .mv_ttl {
         font-size: 15px;
@@ -326,11 +313,12 @@ body{
     }
     .program {
         display: flex;
+        align-items: center;
     }
     .program::before {
         background: url("../images/calendar_icon_m.png")no-repeat;
         margin-right: -37px;
-        margin-top: 5px;
+        margin-top: 40px;
     }
     .program a {
         padding: 0;
@@ -345,6 +333,7 @@ body{
         overflow: hidden;
         width: 100%;
         height: auto;
+        padding-bottom: 80px;
     }
     .greeting h3 {
         font-size: 27px;
@@ -419,21 +408,22 @@ body{
 
     /* 館内のご案内 */
     .information {
-        padding: 90px 0 70px;
+        padding: 40px 0;
     }
-    .infor_img {
-        width: 271px;
-        height: auto;
+    .area {
+        background-size: 250px;
+        width: 250px;
+        height: 280px;
+        margin: 0 auto;
+        padding: 120px 0 0 0;
+        text-align: center;
+        font-size: 25px;
     }
-    .information h4 {
-        font-size: 28px;
-    }
-    .infor_text {
+    .area_text {
         font-size: 16px;
-        padding: 16px 0 43px;
-        letter-spacing: 1px;
-        line-height: 30px;
+        padding-top: 20px;
     }
+
 
     /* instagram */
     .instagram {

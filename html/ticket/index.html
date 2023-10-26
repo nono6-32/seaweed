@@ -8,6 +8,7 @@
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../assets/js/jquery.ripples-min.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/ticket.css">
@@ -44,28 +45,71 @@
     <div class="inner">
       <h3>料金・チケット</h3>
       <div class="box_tabpages">
-        <div>
-          <ul class="flex tab_control" id="tab_control">
-            <li id="tab1" class="tab">
-              <div class="layout flex">
-                <img src="../assets/images/human_icon_white.png" alt="人のアイコン">
-                <p>一般の<br class="br_sp">お客さま</p>
-              </div>
-            </li>
-            <li id="tab2" class="tab">
-              <div class="layout flex">
-                <img src="../assets/images/peuple_icon_white.png" alt="団体のアイコン">
-                <p>一般団体の<br class="br_sp">お客さま</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul class="flex tab_control" id="tab_control">
+          <li id="tab1" class="tab">
+            <div class="layout flex">
+              <img src="../assets/images/human_icon_white.png" alt="人のアイコン">
+              <p>一般の<br class="br_sp">お客さま</p>
+            </div>
+          </li>
+          <li id="tab2" class="tab">
+            <div class="layout flex">
+              <img src="../assets/images/peuple_icon_white.png" alt="団体のアイコン">
+              <p>一般団体の<br class="br_sp">お客さま</p>
+            </div>
+          </li>
+        </ul>
       </div>
       <div id="tab_body" class="tab_body">
         <!-- 一般のお客さま -->
         <div class="tabpage box_general">
-          <div>
-            <h2><img src="..//assets/images/charge_head.png" alt="料金"></h2>
+          <h2><img src="..//assets/images/charge_head.png" alt="料金"></h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>大人<br>（高校生・16歳以上）</th>
+                <th>小中学生</th>
+                <th>幼児（3歳以上）</th>
+                <th>3歳未満</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2,400 <span>円</span></td>
+                <td>1,300 <span>円</span></td>
+                <td>600 <span>円</span></td>
+                <td>無料</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="charge_text">
+            ※ 各種割引制度をご利用の方は<br class="br_sp">　　　　　それぞれのご案内をご覧ください。<br>
+            ※ 確認のため生徒手帳など<br class="br_sp">　　　　　ご提示を求める場合がございます。
+          </p>
+          <div class="passport">
+            <h4>年間パスポート</h4>
+            <p class="passport_p">年間パスポートをオンラインで販売しています。</p>
+            <div class="flex">
+              <div class="passport_btn">
+                <p><a href="">シングルパス / 7,000円</a></p>
+              </div>
+              <div class="passport_btn pass_btn2">
+                <p><a href="">ペアパス / 15,000円</a></p>
+              </div>
+            </div>
+            <p class="charge_text">
+              ※ 外部サイトでの決済です。<br>
+              ※ チケット窓口等、<br class="br_sp">　　　　　水族館現地での販売はありません。
+            </p>
+          </div>
+          <div class="charge2">
+            <h4>障害をお持ちの方への割引</h4>
+            <p class="charge2_text">下記の原本、または、ミライロIDのご提示により以下の料金にてごお利用いただけます。</p>
+            <ul class="flex charge2_list">
+              <li>身体障害者手帳</li>
+              <li>精神障害者保健福祉手帳</li>
+              <li>療育手帳</li>
+            </ul>
             <table class="table">
               <thead>
                 <tr>
@@ -77,66 +121,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>2,400 <span>円</span></td>
-                  <td>1,300 <span>円</span></td>
-                  <td>600 <span>円</span></td>
+                  <td>1,200 <span>円</span></td>
+                  <td>650 <span>円</span></td>
+                  <td>300 <span>円</span></td>
                   <td>無料</td>
                 </tr>
               </tbody>
             </table>
             <p class="charge_text">
-              ※ 各種割引制度をご利用の方は<br class="br_sp">　それぞれのご案内をご覧ください。<br>
-              ※ 確認のため生徒手帳など<br class="br_sp">　kご提示を求める場合がございます。
+              ※ ご本人様が窓口にお越し下さい。<br>
+              ※ 窓口にて手帳の原本または、<br class="br_sp">　　　　　ミライロIDのご提示をお願い致します。<br class="br_sp">　提示がない場合は適用しかねます。<br>
+              ※ ご本人様、および付き添いの方1名が対象です。<br>
+              ※ 各種受給者証、通所証明書等での<br class="br_sp">　　　　　割引は適用できません。
             </p>
-            <div class="passport">
-              <h4>年間パスポート</h4>
-              <p class="passport_p">年間パスポートをオンラインで販売しています。</p>
-              <div class="flex">
-                <div class="passport_btn">
-                  <p><a href="">シングルパス / 7,000円</a></p>
-                </div>
-                <div class="passport_btn pass_btn2">
-                  <p><a href="">ペアパス / 15,000円</a></p>
-                </div>
-              </div>
-              <p class="charge_text">
-                ※ 外部サイトでの決済です。<br>
-                ※ チケット窓口等、水族館現地での販売はありません。
-              </p>
-            </div>
-            <div class="charge2">
-              <h4>障害をお持ちの方への割引</h4>
-              <p class="charge2_text">下記の原本、または、ミライロIDのご提示により以下の料金にてごお利用いただけます。</p>
-              <ul class="flex charge2_list">
-                <li>身体障害者手帳</li>
-                <li>精神障害者保健福祉手帳</li>
-                <li>療育手帳</li>
-              </ul>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>大人<br>（高校生・16歳以上）</th>
-                    <th>小中学生</th>
-                    <th>幼児（3歳以上）</th>
-                    <th>3歳未満</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1,200 <span>円</span></td>
-                    <td>650 <span>円</span></td>
-                    <td>300 <span>円</span></td>
-                    <td>無料</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p class="charge_text">
-                ※ ご本人様が窓口にお越し下さい。<br>
-                ※ 窓口にて手帳の原本または、ミライロIDのご提示をお願い致します。提示がない場合は適用しかねます。<br>
-                ※ ご本人様、および付き添いの方1名が対象です。<br>
-                ※ 各種受給者証、通所証明書等での割引は適用できません。
-              </p>
-            </div>
           </div>
         </div>
       <!-- 一般団体のお客さま -->
