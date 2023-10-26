@@ -209,6 +209,9 @@ body{
 }
 .infor_img {
     padding: 52px 0;
+    width: 30%;
+    height: auto;
+    
 }
 .information h4 {
     font-size: 31px;
@@ -216,6 +219,28 @@ body{
 .infor_text {
     font-size: 19px;
     padding: 40px 0 75px;
+}
+.area1 {
+    background: url("../images/area1.png") no-repeat;
+}
+.area2 {
+    background: url("../images/area2.png") no-repeat;
+}
+.area3 {
+    background: url("../images/area3.png") no-repeat;
+}
+.area {
+    background-size: 328px;
+    width: 328px;
+    height: 340px;
+    margin: 0 auto;
+    padding-top: 150px;
+    font-size: 30px;
+    text-shadow: 0 0 5px #05032B;
+}
+.area_text {
+    font-size: 20px;
+    padding-top: 20px;
 }
 /* instagram */
 .instagram .flex {
@@ -226,16 +251,6 @@ body{
 }
 .instagram .read_btn {
     margin-top: 60px;
-}
-.instagram img {
-    opacity: .7;
-    transition: all .3s;
-}
-.instagram a .instagram_img {
-    opacity: 1;
-}
-.instagram img:hover {
-    opacity: 1;
 }
 
 /* レシポンシブ */

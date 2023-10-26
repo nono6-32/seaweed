@@ -1,6 +1,56 @@
 /* script.js */
-
 $(function () {
+	$('.top_btn').click(function () {
+		$('body,html').animate({
+			scrollTop: 0//ページトップまでスクロール
+		}, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+		return false;//リンク自体の無効化
+	});
+	//スクロールするとトップボタンが回転
+	var rotate = function(logo, angle) {
+		logo.css({
+		"transform" : "rotate("+angle+"deg)"
+		});
+	}
+	$(window).scroll(function(){
+		rotate($(".top_btn"), $(window).scrollTop()*0.1);
+	})
+
+	//スクロールした際の動きを関数でまとめる
+	function PageTopAnime() {
+
+		var scroll = $(window).scrollTop(); //スクロール値を取得
+		if (scroll >= 200){//200pxスクロールしたら
+			$('.top_btn').removeClass('DownMove');		// DownMoveというクラス名を除去して
+			$('.top_btn').addClass('UpMove');			// UpMoveというクラス名を追加して出現
+		}else{//それ以外は
+			if($('.top_btn').hasClass('UpMove')){//UpMoveというクラス名が既に付与されていたら
+				$('.top_btn').removeClass('UpMove');	//  UpMoveというクラス名を除去し
+				$('.top_btn').addClass('DownMove');	// DownMoveというクラス名を追加して非表示
+			}
+		}
+		
+		var wH = window.innerHeight; //画面の高さを取得
+		var footerPos =  $('.footer').offset().top; //footerの位置を取得
+		if(scroll+wH >= (footerPos+10)) {
+			var pos = (scroll+wH) - footerPos-50 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+			$('.top_btn').css('bottom',pos);	//#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+		}else{//それ以外は
+			if($('.top_btn').hasClass('UpMove')){//UpMoveというクラス名がついていたら
+				$('.top_btn').css('bottom','30px');// 下から10pxの位置にページリンクを指定
+			}
+		}
+	}
+
+	// 画面をスクロールをしたら動かしたい場合の記述
+	$(window).scroll(function () {
+	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+	});
+
+	// ページが読み込まれたらすぐに動かしたい場合の記述
+	$(window).on('load', function () {
+	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+	});
 
 	/* 下スクロール・上スクロール切り替え
 	----------------------------------------------- */
@@ -260,28 +310,52 @@ $(function () {
 	//[#tab～]であるか確認
 	hash = (hash.match(/^#tab\d+$/) || [])[0];
     tabchange(hash);
+
+
+		function tabchange(hash){
+		var $tab = $('#tab_control .tab');
+		var $tabpage = $('#tab_body .tabpage');  
+		//初期値を設定
+		var tabname = 0
+		var tabbar = 0
+
+		//ハッシュタグがある場合
+		if (!(hash == null || hash == 'undefined')) {
+		//数字部分を割り出し
+		tabname = hash.slice(4);
+		tabbar = tabname - 1;
+		}
+
+		//コンテンツをすべて非表示
+		$tabpage.css('display', 'none');
+		//指定内容のみ表示
+		$tabpage.eq(tabbar).fadeIn();
+		//タブをすべてoff
+		$tab.removeClass('current');
+		//選択したタブのみon
+		$tab.eq(tabbar).addClass('current');
+	}
+
+	const mySwiper = new Swiper('.swiper', {
+		// Optional parameters
+		loop: true,
+		autoplay: {
+			delay: 3000,
+		},
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+	});
+	
 });
-
-    function tabchange(hash){
-    var $tab = $('#tab_control .tab');
-	var $tabpage = $('#tab_body .tabpage');  
-    //初期値を設定
-    var tabname = 0
-    var tabbar = 0
-
-    //ハッシュタグがある場合
-    if (!(hash == null || hash == 'undefined')) {
-      //数字部分を割り出し
-    tabname = hash.slice(4);
-    tabbar = tabname - 1;
-    }
-
-    //コンテンツをすべて非表示
-    $tabpage.css('display', 'none');
-    //指定内容のみ表示
-    $tabpage.eq(tabbar).fadeIn();
-    //タブをすべてoff
-    $tab.removeClass('current');
-    //選択したタブのみon
-    $tab.eq(tabbar).addClass('current');
-}

@@ -20,6 +20,7 @@ body {
     max-width: 1200px;
     padding: 0;
     margin: 0 auto;
+    width: 100%;
 }
 /* 横並び */
 .flex {
@@ -51,6 +52,46 @@ a {
 .effect_fade .effect_scroll {
     opacity: 1;
     transform: translate(0, 0);
+}
+.swiper {
+    width: 60%;
+    height: auto;
+    padding: 60px 0;
+}
+.swiper-slider {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: .7s; /* ゆっくり小さくさせる */
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    height: 60px;
+    width: 113px;
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    margin: auto;
+    width: 113px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+    background-image: url(../images/arow-left.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+    background-image: url(../images/arow-right.png);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+    height: auto;
+    width: 100%;
 }
 
 /* ヘッダー */
@@ -299,6 +340,38 @@ a {
 .top_btn {
     position: fixed;
     right: 50px;
+    bottom: 30px;
+}
+/*　上に上がる動き　*/
+
+.top_btn .UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+.top_btn .DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+    from {
+        opacity: 1;
+	    transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+	    transform: translateY(100px);
+    }
 }
 
 /* もっと見るボタン */
@@ -327,7 +400,6 @@ a {
 }
 .read_btn:hover span{
     color: #05032B;
-    
 }
 /*横線の設定*/
 .read_btn::before,
@@ -387,7 +459,6 @@ a {
     right: 0;
     bottom: 0;
 }
-
 /* カレント */
 .nav_ul .current::before,
 .nav_ul .current::after {
@@ -482,9 +553,7 @@ a {
     /* フッター */
     .footer {
         background: url("../images/footer_bg_m.png") no-repeat;
-        width: auto;
-        height: 100%;
-        background-size: cover;
+        background-size: auto 100%;
     }
     .sns, .footer_list {
         display: flex;
@@ -503,5 +572,6 @@ a {
     }
     .top_btn {
         right: 10px;
+        bottom: 10px;
     }
 }
