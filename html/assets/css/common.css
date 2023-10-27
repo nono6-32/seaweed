@@ -621,7 +621,7 @@ a {
         border-left: none;
         display: block;
         height: 60px;
-        font-size: 16px;
+        font-size: 18px;
         
     }
     .table thead {
@@ -647,7 +647,7 @@ a {
         background: #05032B;
         color: #F5EFE7;
         border-left: none;
-        padding: 16px 0 0;
+        padding: 20px 0 0;
     }
     .table thead tr th {
         border-bottom: 2px solid #05032B;
@@ -663,6 +663,9 @@ a {
     .table tbody tr td:last-of-type {
         border: none;
         padding: 20px 0 0;
+    }
+    .table tr td span {
+        font-size: 15px;
     }
     .swiper {
         width: 100%;
