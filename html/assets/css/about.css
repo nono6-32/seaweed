@@ -5,6 +5,7 @@
     background: url("../images/about_bg.png") no-repeat;
     background-size: 100% auto;
     width: 100%;
+    height: auto;
     z-index: -1;
     position: absolute;
     margin: 0 auto;
@@ -116,7 +117,7 @@
     /* メインビジュアル */
     .about_mv {
         background: url("../images/about_bg_m.png") no-repeat;
-        height: auto;
+        background-size: 100% auto;
     }
     .about_text h4{
         font-size: 18px;
