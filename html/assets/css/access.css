@@ -50,5 +50,67 @@
 
 /* レシポンシブ */
 @media screen and (max-width: 767px) {
-
+    .access_head h3 {
+        padding-bottom: 40px;
+    }
+    .access_head p {
+        font-size: 19px;
+        line-height: 35px;
+    }
+    .access_head p span {
+        font-size: 24px;
+    }
+    .map p {
+        padding-bottom: 20px;
+        font-size: 17px;
+    }
+    .map p span {
+        padding-left: 1em;
+    }
+    .googleMap iframe {
+        width: 359px;
+        height: 283px;
+    }
+    .parking {
+        padding-top: 50px;
+    }
+    .parking_text {
+        font-size: 17px;
+        padding: 42px 5px;
+    }
+    .parking_note {
+        justify-content: center;
+        display: flex;
+    }
+    .parking_note img {
+        width: 43px;
+        height: 43px;
+    }
+    .parking_note p {
+        padding: 0;
+        line-height: 27px;
+    }
+    /* テーブル */
+    .table {
+        padding: 30px 5px 0;
+        width: 100%;
+    }
+    .table tr td, 
+    .table tr th {
+        height: 60px;
+        font-size: 18px;
+    }
+    .table tr {
+        width: 100%;
+    }
+    .table tr {
+        width: 100%;
+    }
+    .table tr td span {
+        font-size: 15px;
+    }
+    .table tr td:nth-of-type(1) {
+        padding: 0;
+    }
+    
 }

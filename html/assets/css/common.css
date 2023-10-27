@@ -607,66 +607,6 @@ a {
         right: 10px;
         bottom: 10px;
     }
-    /* テーブル */
-    .table {
-        width: 90%;
-        padding: 20px 0;
-    }
-    .table tr {
-        display: block;
-        float: left;
-    }
-    .table tr td, 
-    .table tr th {
-        border-left: none;
-        display: block;
-        height: 60px;
-        font-size: 18px;
-        
-    }
-    .table thead {
-        display: block;
-        float: left;
-        width: 70%;
-    }
-    .table thead tr {
-        width: 100%;
-        border: 2px solid #F5EFE7;
-    }
-    .table tbody {
-        display: block;
-        float: left;
-        width: 30%;
-    }
-    .table tbody tr {
-        width: 100%;
-        border: 2px solid #F5EFE7;
-        border-left: none;
-    }
-    .table tbody tr td {
-        background: #05032B;
-        color: #F5EFE7;
-        border-left: none;
-        padding: 20px 0 0;
-    }
-    .table thead tr th {
-        border-bottom: 2px solid #05032B;
-        padding: 20px 0 0 ;
-    }
-    .table tr th:first-of-type {
-        border-bottom: 2px solid #05032B;
-        padding: 13px 0 0;
-    }
-    .table tr th:last-of-type {
-        border: none;
-    }
-    .table tbody tr td:last-of-type {
-        border: none;
-        padding: 20px 0 0;
-    }
-    .table tr td span {
-        font-size: 15px;
-    }
     .swiper {
         width: 100%;
         padding: 30px 0;
