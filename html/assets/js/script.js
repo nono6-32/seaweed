@@ -71,102 +71,160 @@ $(function () {
 		PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 		});
 	
-		// ページが読み込まれたらすぐに動かしたい場合の記述
-		$(window).on('load', function () {
-		PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-		});
-	
-		jQuery(document).ready(function ($) {
-			var bArray = [];
-			var sArray = [8, 12, 17, 22, 30];
-			var animationInterval;
-			var animationDuration = 20000; // アニメーションの時間（ミリ秒）
-		
-			for (var i = 0; i < $('main').width(); i++) {
-				bArray.push(i);
-			}
-		
-			function randomValue(arr) {
-				return arr[Math.floor(Math.random() * arr.length)];
-			}
-		
-			function startAnimation() {
-				animationInterval = setInterval(function () {
-					var size = randomValue(sArray);
-					$('main').append(
-						'<div class="bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>'
-					);
-		
-					$('.bubble').animate({
-						'bottom': '100%',
-						'opacity': '-=0.7'
-					}, animationDuration, function () {
-						$(this).remove();
-					});
-				}, 350);
-			}
-		
-			startAnimation(); // アニメーションを開始
-		
-			// 一定時間が経過したらアニメーションを停止
-			setTimeout(function () {
-				clearInterval(animationInterval);
-			}, 20000); // 60秒後に停止（例）
-		
-		});
-		$(".hamburger").click(function () {//ボタンがクリックされたら
-			$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-			$(".g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-			$(".circle-bg").toggleClass('circleactive');//丸背景にcircleactiveクラスを付与
-		});
+	// ページが読み込まれたらすぐに動かしたい場合の記述
+	$(window).on('load', function () {
+	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+	});
 
-		$(".g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-			$(".hamburger").removeClass('active');//ボタンの activeクラスを除去し
-			$(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
-			$(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
-		});
-		// 画面をスクロールしたら動かす
-		$(window).scroll(function () {
-			PageTopAnime();
-		});
+	jQuery(document).ready(function ($) {
+		var bArray = [];
+		var sArray = [8, 12, 17, 22, 30];
+		var animationInterval;
+		var animationDuration = 20000; // アニメーションの時間（ミリ秒）
 	
-		// ページが読み込まれたらすぐに動かす
-		$(window).on('load', function () {
-			PageTopAnime();
-			startAnimation(); // アニメーションを開始
+		for (var i = 0; i < $('main').width(); i++) {
+			bArray.push(i);
+		}
 	
-			// 一定時間が経過したらアニメーションを停止
-			setTimeout(function () {
-				clearInterval(animationInterval);
-			}, animationDuration);
-		});
+		function randomValue(arr) {
+			return arr[Math.floor(Math.random() * arr.length)];
+		}
 	
-		function PageTopAnime() {
-			var scroll = $(window).scrollTop();
-			var $main = $('main'); 
-			
-			if (scroll >= 200) {
-				$main.find('.top_btn').removeClass('DownMove').addClass('UpMove');
-			} else {
-				if ($main.find('.top_btn').hasClass('UpMove')) {
-					$main.find('.top_btn').removeClass('UpMove').addClass('DownMove');
-				}
-			}
+		function startAnimation() {
+			animationInterval = setInterval(function () {
+				var size = randomValue(sArray);
+				$('main').append(
+					'<div class="bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>'
+				);
 	
-			var wH = window.innerHeight;
-			var $footer = $main.find('.footer');
-			var footerPos = $footer.offset().top;
+				$('.bubble').animate({
+					'bottom': '100%',
+					'opacity': '-=0.7'
+				}, animationDuration, function () {
+					$(this).remove();
+				});
+			}, 350);
+		}
 	
-			if (scroll + wH >= footerPos + 10) {
-				var pos = scroll + wH - footerPos - 50;
-				$main.find('.top_btn').css('bottom', pos);
-			} else {
-				if ($main.find('.top_btn').hasClass('UpMove')) {
-					$main.find('.top_btn').css('bottom', '30px');
-				}
-			}
+		startAnimation(); // アニメーションを開始
+	
+		// 一定時間が経過したらアニメーションを停止
+		setTimeout(function () {
+			clearInterval(animationInterval);
+		}, 20000); // 60秒後に停止（例）
+	
+	});
+	$(".hamburger").click(function () {//ボタンがクリックされたら
+		$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+		$(".g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+		$(".circle-bg").toggleClass('circleactive');//丸背景にcircleactiveクラスを付与
+	});
+
+	$(".g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+		$(".hamburger").removeClass('active');//ボタンの activeクラスを除去し
+		$(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
+		$(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
+	});
+	// 画面をスクロールしたら動かす
+	$(window).scroll(function () {
+		PageTopAnime();
+	});
+
+	// ページが読み込まれたらすぐに動かす
+	$(window).on('load', function () {
+		PageTopAnime();
+		startAnimation(); // アニメーションを開始
+
+		// 一定時間が経過したらアニメーションを停止
+		setTimeout(function () {
+			clearInterval(animationInterval);
+		}, animationDuration);
+	});
+	
+    //アコーディオンをクリックした時の動作
+	$('.title').on('click', function() {//タイトル要素をクリックしたら
+		$('.box').slideUp(500);//クラス名.boxがついたすべてのアコーディオンを閉じる
+		
+		var findElm = $(this).next(".mobile-info");//タイトル直後のアコーディオンを行うエリアを取得
+		
+		if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+			$(this).removeClass('close');//クラス名を除去    
+		}else{//それ以外は
+			$('.close').removeClass('close'); //クラス名closeを全て除去した後
+			$(this).addClass('close');//クリックしたタイトルにクラス名closeを付与し
+			$(findElm).slideDown(500);//アコーディオンを開く
 		}
 	});
+
+	//ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
+	$(window).on('load', function(){
+		$('.zoo_box:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
+		$(".open").each(function(index, element){	//openクラスを取得
+			var Title =$(element).children('.title');	//openクラスの子要素のtitleクラスを取得
+			$(Title).addClass('close');				///タイトルにクラス名closeを付与し
+			var Box =$(element).children('.mobile-info');	//openクラスの子要素boxクラスを取得
+			$(Box).slideDown(500);					//アコーディオンを開く
+		});
+	});
+
+	$(document).ready(function () {
+		$('.zoo_box').click(function () {
+		  // クリックされた画像以外の画像をフェードアウト
+			$('.zoo_box').not(this).animate({ opacity: 0.5 }, 300);
+	
+		  // クリックされた画像をフェードイン
+			$(this).animate({ opacity: 1 }, 300);
+		});
+	});
+	$('.title').on('click', function() {
+    var findElm = $(this).next(".mobile-info");
+
+    if (!findElm.hasClass('active')) {
+        $('.mobile-info.active').slideUp(500).removeClass('active'); // 開かれている mobile-info を閉じる
+        findElm.addClass('active').slideDown(500); // クリックされた mobile-info を表示
+    }
+});
+$('.title').on('click', function() {
+    $('.box').removeClass('active'); // すべての mobile-info の表示を非アクティブにする
+
+    var findElm = $(this).next(".mobile-info");
+
+    if ($(this).hasClass('close')) {
+        $(this).removeClass('close');
+    } else {
+        $('.close').removeClass('close');
+        $(this).addClass('close');
+        findElm.addClass('active'); // クリックされた mobile-info をアクティブにする
+    }
+});
+
+
+	function PageTopAnime() {
+		var scroll = $(window).scrollTop();
+		var $main = $('main'); 
+		
+		if (scroll >= 200) {
+			$main.find('.top_btn').removeClass('DownMove').addClass('UpMove');
+		} else {
+			if ($main.find('.top_btn').hasClass('UpMove')) {
+				$main.find('.top_btn').removeClass('UpMove').addClass('DownMove');
+			}
+		}
+
+		var wH = window.innerHeight;
+		var $footer = $main.find('.footer');
+		var footerPos = $footer.offset().top;
+
+		if (scroll + wH >= footerPos + 10) {
+			var pos = scroll + wH - footerPos - 50;
+			$main.find('.top_btn').css('bottom', pos);
+		} else {
+			if ($main.find('.top_btn').hasClass('UpMove')) {
+				$main.find('.top_btn').css('bottom', '30px');
+			}
+		}
+	}
+});
 	
 	
 
