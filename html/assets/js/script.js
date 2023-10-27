@@ -114,7 +114,17 @@ $(function () {
 			}, 20000); // 60秒後に停止（例）
 		
 		});
-	
+		$(".hamburger").click(function () {//ボタンがクリックされたら
+			$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+			$(".g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+			$(".circle-bg").toggleClass('circleactive');//丸背景にcircleactiveクラスを付与
+		});
+
+		$(".g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+			$(".hamburger").removeClass('active');//ボタンの activeクラスを除去し
+			$(".g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
+			$(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
+		});
 		// 画面をスクロールしたら動かす
 		$(window).scroll(function () {
 			PageTopAnime();
@@ -203,6 +213,8 @@ $(function () {
 			$('.tbl_gradation dt').matchHeight();
 		});
 	};
+
+	
 
 $(function () {
 

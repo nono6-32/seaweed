@@ -449,7 +449,7 @@
     }
     .heckler1 {
         width: 50%;
-        height: 980px;
+        height: 900px;
         margin: 85px 0 0 30%;
     }
     .heckler2 {
@@ -553,9 +553,6 @@
     }
     .tel .apply_head_box {
         margin-top: 60px;
-    }
-    .footer {
-        margin: 400px 0 0 0;
     }
     .step2, .step3 {
         padding: 0;
