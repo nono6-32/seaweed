@@ -251,13 +251,25 @@ $(function () {
         crossOrigin: ""
     });
 
+	window.addEventListener('scroll', function() {
+		if (window.scrollY >= 400) {
+		  // スクロール位置が400px以上の場合
+			document.querySelector('.header .nav_ul li').style.background = '#05032B';
+		} else {
+		  // スクロール位置が400px未満の場合
+		  document.querySelector('.header .nav_ul li').style.background = ''; // スタイルをクリア
+		}
+	});
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() >= 400) {
+			$('.header .nav_ul li').css('background', '#05032b56');
+		} else {
+			$('.header .nav_ul li').css('background', '');
+		}
+	});
 	/* 要素をふわっと表示
 	----------------------------------------------- */
-	window.onload = function () {
-		scroll_effect();
-		$(window).scroll(function () {
-			scroll_effect();
-		});
 
 		function scroll_effect() {
 			$('.effect_fade').each(function () {
@@ -284,8 +296,9 @@ $(function () {
 		$('.accordion_trigger').on('click',function(){
 			$('.tbl_gradation dt').matchHeight();
 		});
-	};
+	});
 
+	
 	
 
 $(function () {
@@ -357,6 +370,5 @@ $(function () {
 		scrollbar: {
 			el: '.swiper-scrollbar',
 		},
-	});
 	});
 });
