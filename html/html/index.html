@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="assets/css/reset.css">
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="assets/js/jquery.ripples-min.js"></script>
-  <script src="assets/js/script.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/_variables.scss">
+  <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -35,24 +35,12 @@
           <!-- 768px以下でハンバーガーメニューに -->
           <div class="m_nav">
             <div class="hamburger"><span></span><span></span><span></span></div>
-            <div class="g-nav">
-              <div class="g-nav-list">
-                <ul>
-                  <li><a href="about/index.html">海藻水族館の魅力</a></li>
-                  <li><a href="guide/index.html">館内のご案内</a></li>
-                  <li><a href="news/index.html">イベント情報</a></li>
-                  <li><a href="ticket/index.html">料金・チケット</a></li>
-                  <li><a href="access/index.html">アクセス</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="circle-bg"></div>
           </div>        
         </div>
         <div class="top_img">
           <p><img src="assets/images/top_bg.png" alt="サメ" class="img-fluid"></p>
         </div>
-      <div class="flex mv mainVisual">
+      <div class="flex mv">
         <video class="mv_img" src="assets/images/top_mv.MOV" autoplay muted playsinline loop class="img-fluid"></video>
         <div class="mv_text">
           <p class="sub_title">豊洲駅から徒歩10分、海の世界の扉へ</p>
@@ -61,9 +49,9 @@
         </div>
       </div>
       <div class="flex mv_box">
-        <div class="box weather_box">
+        <div class="box">
           <p class="mv_ttl">今日の天気</p>
-          <p><img src="assets/images/weather/sunny.png" alt="" id="weather"></p>
+          <p><img src="" alt=""></p>
         </div>
         <div class="box">
           <p class="mv_ttl">営業時間</p>
@@ -124,30 +112,9 @@
     </section>
     <section class="information">
       <h2><img src="assets/images/information_head.png" alt="館内のご案内"></h2>
-      <div class="swiper">
-        <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <a href="guide/index.html">
-                <p class="area1 area">深海エリア</p>
-                <p class="area_text">宇宙よりたどり着くのが難しいと言われている<br class="br_sp">深海に住んでいる魚たちを展示しています</p>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a href="guide/index.html">
-                <p class="area2 area">東京湾エリア</p>
-                <p class="area_text">多彩な海洋生物と<br class="br_sp">美しい海の景色に魅了されることでしょう。</p>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a href="guide/index.html">
-                <p class="area3 area">清流と湖畔エリア</p>
-                <p class="area_text">新鮮な水と自然の美しさが共存し、<br class="br_sp">穏やかな散策を楽しむ場所です。</p>
-              </a>
-            </li>
-        </ul>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
+      <img src="assets/images/infor_img1.png" alt="深海エリア" class="infor_img">
+      <h4>深海エリア</h4>
+      <p class="infor_text">宇宙よりたどり着くのが難しいといわれている<br class="br_sp">深海に住んでいる魚たちを展示しています</p>
       <a href="guide/index.html" class="read_btn"><span>もっと見る</span></a>
     </section>
     <section class="instagram">
@@ -191,6 +158,5 @@
   <div class="top_btn">
     <a href="#"><img src="assets/images/top_btn.png" alt="トップへ戻る"></a>
   </div>
-  <script src="assets/js/weather.js"></script>
 </body>
 </html>

@@ -47,17 +47,9 @@
 .area_bg .read_btn {
     margin-top: 20px;
 }
-.swiper-button-prev, .swiper-button-next {
-    display: none;
-}
-.swiper-wrapper {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(3, 1fr);
-}
 /* レシポンシブ */
 @media screen and (max-width: 767px) {
-    main .flex {
+    .flex {
         display: flex;
         justify-content: space-evenly;
     }
@@ -74,65 +66,10 @@
         padding: 3px;
         margin: 0 0 3px 0.5em;
     }
-    .area h2 {
-        margin: 30px 0;
-    }
     .map img {
         width: 100%;
         height: auto;
         padding: 5px;
-    }
-    .swiper-slide {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        transition: .7s;
-    }
-    .swiper-slide p {
-        width: 100%;
-    }
-    /* 前へ次への矢印カスタマイズ */
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: block;
-        height: 36px;
-        width: 68px;
-    }
-    /* 前へ次への矢印カスタマイズ */
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        height: 60px;
-        margin: auto;
-        width: 113px;
-    }
-    /* 前への矢印カスタマイズ */
-    .swiper-button-prev::after {
-        background-image: url(../images/arow-left.png);
-    }
-    /* 次への矢印カスタマイズ */
-    .swiper-button-next::after {
-        background-image: url(../images/arow-right.png);
-    }
-    .swiper {
-        width: auto;
-        height: 100%;
-        background-size: cover;
-        padding: 30px 0 80px;
-    }
-    /* 前へ次への矢印カスタマイズ */
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        height: 36px;
-        width: 68px;
-        margin: 0;
-    }
-    /* 画像サイズ調整 */
-    .swiper-slide img {
-        height: 100%;
-        width: 100%;
     }
     .area h2 {
         padding: 0;
@@ -177,7 +114,6 @@
     }
     .area_box  div {
         width: 100%;
-        padding-bottom: 40px;
     }
     .area_bg div:first-of-type {
         padding: 0;

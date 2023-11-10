@@ -178,54 +178,68 @@ $(function () {
 	});
 	$('.title').on('click', function() {
     var findElm = $(this).next(".mobile-info");
+		if (!findElm.hasClass('active')) {
+			$('.mobile-info.active').slideUp(500).removeClass('active'); // 開かれている mobile-info を閉じる
+			findElm.addClass('active').slideDown(500); // クリックされた mobile-info を表示
+		}
+	});
+	$('.title').on('click', function() {
+		$('.box').removeClass('active'); // すべての mobile-info の表示を非アクティブにする
 
-    if (!findElm.hasClass('active')) {
-        $('.mobile-info.active').slideUp(500).removeClass('active'); // 開かれている mobile-info を閉じる
-        findElm.addClass('active').slideDown(500); // クリックされた mobile-info を表示
-    }
-});
-$('.title').on('click', function() {
-    $('.box').removeClass('active'); // すべての mobile-info の表示を非アクティブにする
+		var findElm = $(this).next(".mobile-info");
 
-    var findElm = $(this).next(".mobile-info");
-
-    if ($(this).hasClass('close')) {
-        $(this).removeClass('close');
-    } else {
-        $('.close').removeClass('close');
-        $(this).addClass('close');
-        findElm.addClass('active'); // クリックされた mobile-info をアクティブにする
-    }
-});
-
-
-	function PageTopAnime() {
-		var scroll = $(window).scrollTop();
-		var $main = $('main'); 
-		
-		if (scroll >= 200) {
-			$main.find('.top_btn').removeClass('DownMove').addClass('UpMove');
+		if ($(this).hasClass('close')) {
+			$(this).removeClass('close');
 		} else {
-			if ($main.find('.top_btn').hasClass('UpMove')) {
-				$main.find('.top_btn').removeClass('UpMove').addClass('DownMove');
+			$('.close').removeClass('close');
+			$(this).addClass('close');
+			findElm.addClass('active'); // クリックされた mobile-info をアクティブにする
+		}
+	});
+
+	//スクロールした際の動きを関数でまとめる
+	function PageTopAnime() {
+
+		var scroll = $(window).scrollTop(); //スクロール値を取得
+		if (scroll >= 200){//200pxスクロールしたら
+			$('.top_btn').removeClass('DownMove');		// DownMoveというクラス名を除去して
+			$('.top_btn').addClass('UpMove');			// UpMoveというクラス名を追加して出現
+		}else{//それ以外は
+			if($('.top_btn').hasClass('UpMove')){//UpMoveというクラス名が既に付与されていたら
+				$('.top_btn').removeClass('UpMove');	//  UpMoveというクラス名を除去し
+				$('.top_btn').addClass('DownMove');	// DownMoveというクラス名を追加して非表示
 			}
 		}
-
-		var wH = window.innerHeight;
-		var $footer = $main.find('.footer');
-		var footerPos = $footer.offset().top;
-
-		if (scroll + wH >= footerPos + 10) {
-			var pos = scroll + wH - footerPos - 50;
-			$main.find('.top_btn').css('bottom', pos);
-		} else {
-			if ($main.find('.top_btn').hasClass('UpMove')) {
-				$main.find('.top_btn').css('bottom', '30px');
+		
+		var wH = window.innerHeight; //画面の高さを取得
+		var footerPos =  $('.footer').offset().top; //footerの位置を取得
+		if(scroll+wH >= (footerPos+10)) {
+			var pos = (scroll+wH) - footerPos-50 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+			$('.top_btn').css('bottom',pos);	//.top_btnに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+		}else{//それ以外は
+			if($('.top_btn').hasClass('UpMove')){//UpMoveというクラス名がついていたら
+				$('.top_btn').css('bottom','40px');// 下から10pxの位置にページリンクを指定
 			}
 		}
 	}
-});
-	
+
+	// 画面をスクロールをしたら動かしたい場合の記述
+	$(window).scroll(function () {
+	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+	});
+
+	// ページが読み込まれたらすぐに動かしたい場合の記述
+	$(window).on('load', function () {
+	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+	});
+
+	// #page-topをクリックした際の設定
+	$('.top_btn').click(function () {
+	$('body,html').animate({
+		scrollTop: 0//ページトップまでスクロール
+	}, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+		return false;//リンク自体の無効化
+	});
 	
 
 	//水面のアニメーション
@@ -344,5 +358,5 @@ $(function () {
 			el: '.swiper-scrollbar',
 		},
 	});
-	
+	});
 });

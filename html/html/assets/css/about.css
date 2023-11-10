@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/* メインビジュアル */
+.about_mv {
+    background: url("../images/about_bg.png") no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 0px;
+}
+.about_text {
+    padding-bottom: 200px;
+    text-align: center;
+}
+.about_text h4 {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.about_text p {
+    padding-top: 70px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+
+/* 楽しみ方 */
+.enjoy {
+    padding-top: 1000px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+.enjoy_box {
+    padding: 90px 0;
+    max-width: 1440px;
+}
+.relative_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.enjoy2_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.enjoy1 .relative_img, .enjoy3 .relative_img {
+    left: -160px;
+}
+.enjoy2 .relative_img {
+    right: -160px;
+}
+
+.enjoy1 .enjoy_text h5, .enjoy3 .enjoy_text h5  {
+    left: -2em;
+    position: relative;
+}
+.enjoy1 .enjoy_text {
+    width: 1000px;
+    margin-right: 50px;
+}
+.enjoy2 .enjoy_text {
+    padding: 60px 0 0 180px;
+    width: 800px;
+}
+.enjoy3 .enjoy_text {
+    width: 1000px;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+.enjoy_text h5 {
+    font-size: 29px;
+    letter-spacing: 2px;
+}
+.enjoy_text p {
+    font-size: 18px;
+    line-height: 2.5em;
+}
+
+/* 生き物紹介 */
+.zoo {
+    text-align: center;
+}
+.zoo h2 {
+    padding-bottom: 90px;
+}
+.zoo .flex {
+    justify-content: center;
+}
+.zoo_box:nth-of-type(2) {
+    padding: 0 90px;
+}
+.zoo .flex:first-of-type {
+    padding-bottom: 128px;
+}
+.zoo_box p:first-of-type {
+    font-size: 33px;
+    letter-spacing: 3px;
+    padding-top: 22px;
+    font-weight: 700;
+}
+.zoo_box p:nth-of-type(2){
+    font-size: 22px;
+    letter-spacing: 1.76px;
+    padding: 8px 0 32px;
+}
+.zoo_box p:nth-of-type(3){
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: 0.7px;
+}
+
+/* レシポンシブ */
+@media screen and (max-width: 767px) {
+    /* メインビジュアル */
+    .about_mv {
+        background: url("../images/about_bg_m.png") no-repeat;
+        height: auto;
+    }
+    .about_text h4{
+        font-size: 18px;
+        letter-spacing: 0.76px;
+        padding: 70px 0 40px;
+    }
+    .about_text p {
+        font-size: 15px;
+        line-height: 40px;
+        padding-top: 0;
+    }
+    /* 楽しみ方 */
+    .enjoy1, .enjoy3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .enjoy2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .enjoy {
+        width: 100%;
+        padding: 790px 0 0 0;
+        text-align: center;
+    }
+    .enjoy_box {
+        padding: 70px 0;
+        width: 100%;
+    }
+    .relative_img, .enjoy2_img {
+        position: absolute;
+        z-index: -1;
+    }
+    .enjoy3 .relative_img {
+        margin-top: 30px;
+    }
+    .relative_img img, .enjoy2_img img {
+        width: 480px;
+        height: auto;
+    }
+    .enjoy1 .relative_img, .enjoy3 .relative_img {
+        right: 5%;
+    }
+    .enjoy2 .relative_img {
+        overflow: hidden;
+        padding-top: 200px;
+        right: 0;
+    }
+    .enjoy1 .enjoy_text, .enjoy3 .enjoy_text {
+        width: 100%;
+        padding: 0;
+    }
+    .enjoy1 .enjoy_text {
+        padding: 210px 0 0 0;
+    }
+    .enjoy2 .enjoy_text {
+        padding: 0;
+        width: 100%;
+    }
+    .enjoy3 .enjoy_text {
+        padding: 250px 0 0 0;
+    }
+    .enjoy1 .enjoy_text h5, 
+    .enjoy2 .enjoy_text h5, 
+    .enjoy3 .enjoy_text h5 {
+        font-size: 27px;
+        letter-spacing: 0.81px;
+        text-shadow: 0px 0px 4px #05032B;
+    }
+    .enjoy1 .enjoy_text h5, .enjoy3 .enjoy_text h5 {
+        margin-right: 10px;
+        text-align: right;
+        left: 0;
+    }
+    .enjoy_text p {
+        font-size: 15px;
+        letter-spacing: 0;
+        padding-top: 45px;
+    }
+    .enjoy2 .enjoy_text h5 {
+        text-align: left;
+        margin-left: 10px;
+        padding-top: 280px;
+    }
+    .enjoy3 .enjoy_text h5  {
+        padding-top: 30px;
+    }
+
+    /* 生き物の紹介 */
+    .zoo {
+        width: 100%;
+    }
+    .zoo .flex:first-of-type {
+        padding: 0 10px;
+    }
+    .zoo .flex {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        align-items: center;
+    }
+    .zoo_box {
+        width: 100%;
+    }
+    .zoo_box img {
+        width: 100%;
+    }
+    .zoo h2 {
+        padding: 0;
+    }
+    .zoo .br_sp {
+        padding: 20px 0;
+    }
+    .zoo_box:nth-of-type(2) {
+        padding: 0 10px;
+    }
+    .zoo_box p:first-of-type {
+        font-size: 21px;
+        letter-spacing: 1px;
+        padding-top: 5px;
+        font-weight: 700;
+    }
+    .zoo_box p:nth-of-type(2){
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        padding: 0 0 15px;
+    }
+    .zoo_box p:nth-of-type(3){
+        font-size: 16px;
+        line-height: 50px;
+        letter-spacing: 0.8px;
+        display: none;
+        width: 100%;
+        position: absolute;
+        padding: 5px;
+        line-height: 30px;
+    }
+    .zoo .flex:first-of-type p:nth-of-type(3){
+        text-align: left;
+    }
+    .zoo .flex:nth-of-type(2) p:nth-of-type(3){
+        text-align: center;
+    }
+    .zoo .flex:last-of-type p:nth-of-type(3){
+        text-align: right;
+    }
+    .zoo_box #click {
+        display: block;
+        opacity: 1;
+    }
+}
