@@ -3,65 +3,30 @@
 body{
     background: conic-gradient(from 180deg at 50% 50%, #05032B 90.22520899772644deg, #050430 179.79620575904846deg, #05032B 269.37427282333374deg);
 }
-.swiper {
-    width: 60%;
-    height: auto;
-    padding: 60px 0;
-}
-.swiper-slide {
+/* ヘッダー */
+.topImg {
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: .7s; /* ゆっくり小さくさせる */
 }
-/* 前へ次への矢印カスタマイズ */
-.swiper-button-prev,
-.swiper-button-next {
-    height: 60px;
-    width: 113px;
-}
-
-/* 前へ次への矢印カスタマイズ */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    height: 60px;
-    margin: auto;
-    width: 113px;
-}
-/* 前への矢印カスタマイズ */
-.swiper-button-prev::after {
-    background-image: url(../images/arow-left.png);
-}
-/* 次への矢印カスタマイズ */
-.swiper-button-next::after {
-    background-image: url(../images/arow-right.png);
-}
-/* 画像サイズ調整 */
-.swiper-slide img {
-    height: auto;
-    width: 100%;
-}
-/* ヘッダー */
 .top_img {
     top: 0;
     right: 0;
-    width: 650px;
-    height: 100%;
+    width: 50%;
+    height: auto;
     position: absolute;
-
+    z-index: -1;
 }
 /* メインビジュアル */
 .mv {
     padding-top: 60px;
     justify-content: center;
 }
+.mv_video {
+    width: 45vw;
+}
 .mv_img {
-    width: 690px;
-    height: 690px;
-    padding-right: 50px;
+    width: 100%;
+    height: 100%;
     z-index: -2;
 }
 .mv_text {
@@ -97,9 +62,10 @@ body{
 .mv_box {
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .box {
-    padding: 0 60px;
+    padding: 0 4%;
 }
 .box:last-child {
     padding-right: 0;
@@ -108,38 +74,27 @@ body{
     text-align: center;
 }
 #weather {
-    width: 50px;
-    height: 50px;
-}
-.program {
-    padding-top: 25px;
-}
-.program a {
-    padding-left: 77px;
-    margin-left: -77px;
-}
-.program::before {
-    background: url("../images/calendar_icon.png")no-repeat;
-    content: "";
-    width: 77px;
-    height: 77px;
-}
-.program:hover a {
-    opacity: 0.7;
-}
-.program:hover::before {
-    opacity: 0.7;
+    width: 5vw;
+    height: 5vw;
 }
 .mv_ttl {
     text-align: center;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
 }
 .text_box {
     font-size: 30px;
 }
+.cal_icon {
+    width: 4.5vw;
+    height: 100%;
+}
+.program:hover {
+    opacity: 0.7;
+}
 .text_box2 {
     font-size: 20px;
-    line-height: normal;
+    line-height: 25px;
+    padding: 8px 0 0 8px;
 }
 .main_visual {
     margin-bottom: 50px;
@@ -151,8 +106,8 @@ body{
     align-items: center;
     padding-bottom: 140px;
     background: url("../images/top_news_bg.png") no-repeat;
-    width: 1200px;
-    height: 553px;
+    width: 100%;
+    height: auto;
     left: 0;
 }
 .greeting h3 {
@@ -162,9 +117,9 @@ body{
     text-align: center
 }
 .greeting p {
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 2.25px;
-    line-height: 90px;
+    line-height: 50px;
 }
 
 /* お知らせ */
@@ -282,6 +237,47 @@ body{
     font-size: 20px;
     padding-top: 20px;
 }
+.swiper {
+    width: 60%;
+    height: auto;
+    padding: 60px 0;
+}
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: .7s; /* ゆっくり小さくさせる */
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    height: 60px;
+    width: 113px;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 60px;
+    margin: auto;
+    width: 113px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+    background-image: url(../images/arow-left.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+    background-image: url(../images/arow-right.png);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+    height: auto;
+    width: 100%;
+}
 /* instagram */
 .instagram .flex {
     justify-content: center;
@@ -305,34 +301,32 @@ body{
         padding: 0;
         width: 100%;
     }
-    .mv_img {
+    .mv_video {
         width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: -20px;
-        padding-right: 0;
+        padding: 10vw 0 0 3vw;
     }
     .mv_text {
         width: 100%;
         height: auto;
         padding: 0;
         text-align: center;
-        margin-top: -90px;
     }
     .sub_title {
-        font-size: 18px;
+        font-size: 1em;
     }
     .en_seaweed {
-        font-size: 19px;
+        font-size: 1em;
         letter-spacing: 2.09px;
+        padding-top: 6vw;
     }
     .en_seaweed:before, .en_seaweed::after {
         width: 5vw;
         padding: 0 5vw;
     }
     .mv_text h1 {
-        font-size: 55px;
-        letter-spacing: 13px;
+        font-size: 3em;
+        letter-spacing: 0.2em;
+        padding-top: 3vw;
     }
     .mv_box {
         display: flex;
@@ -340,33 +334,40 @@ body{
         margin: 0;
         padding: 58px 0 0;
     }
+    #weather {
+        width: 10vw;
+        height: 10vw;
+    }
     .box {
         padding: 0;
     }
     .mv_ttl {
-        font-size: 15px;
+        font-size: 0.8em;
     }
     .text_box {
-        font-size: 20px;
+        font-size: 1.5em;
     }
     .mv_box .box:nth-of-type(2) {
         padding: 0 25px;
     }
     .program {
         display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
         align-items: center;
     }
-    .program::before {
-        background: url("../images/calendar_icon_m.png")no-repeat;
-        margin-right: -37px;
-        margin-top: 40px;
+    .cal_icon {
+        width: 9vw;
+        height: 100%;
     }
     .program a {
         padding: 0;
         margin: 0;
     }
     .text_box2{
-        font-size: 15px;
+        font-size: 0.8em;
+        line-height: 1em;
+        padding: 0 0 10px;
     }
     /* 挨拶  */
     .greeting {
@@ -378,13 +379,17 @@ body{
     }
     .greeting h3 {
         font-size: 27px;
+        padding: 60px 0 30px;
     }
     .greeting p {
         font-size: 17px;
         letter-spacing: 0.24px;
-        line-height: 50px;
+        line-height: 45px;
     }
     /* お知らせ */
+    .news {
+        padding: 30px 0;
+    }
     .news .flex .flex {
         display: flex;
         justify-content: space-evenly;
@@ -449,7 +454,7 @@ body{
 
     /* 館内のご案内 */
     .information {
-        padding: 40px 0;
+        padding: 80px 0;
     }
     .area {
         background-size: 250px;
@@ -464,7 +469,28 @@ body{
         font-size: 16px;
         padding-top: 20px;
     }
-
+    .swiper {
+        width: 100%;
+        padding: 30px 0;
+    }
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 68px;        
+        height: 36px;
+    }
+    
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        width: 68px;
+        height: 36px;
+    }
+    /* 画像サイズ調整 */
+    .swiper-slide img {
+        height: 100%;
+        width: 100%;
+    }
 
     /* instagram */
     .instagram {
